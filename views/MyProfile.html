@@ -1,0 +1,368 @@
+<main class="policyDetails">
+    <section>
+        <div class="container">
+            <div class="row pageHeading">
+                <div class="col-xs-12 col-sm-6 col-lg-6">
+                	<h1 class="pageTitle">My Profile</h1>
+                	<a href="#/" class="back-arrow fas fa-chevron-left"></a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-6">
+                    <div class="payment-dues fltrt">
+                		<div class="edit-img-section">
+                			<img src="images/neerajSethiImage.jpg" class="edit-img-profile">
+                			<span class="img-profile-camera"><i class="fas fa-camera "></i><input class="uploadProfileImg" type="file"></span>
+                		</div>                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="policies-data">
+
+            	<div class="row">
+            		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            			<div class="policy-details-tab">
+            				<div class="tab-left-arrow">
+            					<div class="policy-tab-left fas fa-chevron-left" ng-class="{'tab-arrow-disabled': CtrlProfile.tabPrevDisabledProfile === true}" ng-click="CtrlProfile.tabPrevProfile()"></div>
+            				</div>
+
+            				<div class="tab-headings">            				
+            					<ul>
+            						<li ng-click="CtrlProfile.tabClickProfile('personalDetails')" ng-class="{active: CtrlProfile.tabProfile ==='personalDetails'}" ng-init="CtrlProfile.tabProfile='personalDetails';CtrlProfile.tabPrevDisabledProfile = true;CtrlProfile.tabNextDisabledProfile = false">Personal Details</li>
+            						<li ng-click="CtrlProfile.tabClickProfile('contactDetails')" ng-class="{active: CtrlProfile.tabProfile ==='contactDetails'}">Contact Details</li>
+            						<li ng-click="CtrlProfile.tabClickProfile('lifeAssured')" ng-class="{active: CtrlProfile.tabProfile ==='lifeAssured'}">Life Assured</li>
+            						<li ng-click="CtrlProfile.tabClickProfile('uploadDocs')" ng-class="{active: CtrlProfile.tabProfile ==='uploadDocs'}">Upload Docs</li>
+            					</ul>
+            				</div>
+            				
+            				<div class="tab-right-arrow">
+            					<div class="policy-tab-right fas fa-chevron-right" ng-class="{'tab-arrow-disabled': CtrlProfile.tabNextDisabledProfile === true}" ng-click="CtrlProfile.tabNextProfile()"></div>            					
+            				</div>
+            			</div>
+            		</div>
+            		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            			<div class="profile-tab-contents">
+            			
+            				<div class="tabContent" ng-if="CtrlProfile.tabProfile==='personalDetails'">
+            					<div class="row">
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Date Of Birth <span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editPersonal('dob',CtrlProfile.profileDob)"></span> </p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileDob"></p>
+            						</div>
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Name <span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editPersonal('name',CtrlProfile.profileName)"></span> </p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileName"></p>
+            						</div>
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Gender<span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editPersonal('gender',CtrlProfile.profileGender)"></span></p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileGender"></p>
+            						</div>
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Marital Status<span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editPersonal('maritialStatus',CtrlProfile.profileMaritialStatus)"></span></p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileMaritialStatus"></p>
+            						</div>
+            					</div>	
+            					<div class="row">            						
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Nationality</p>
+            							<p class="font-21">India</p>
+            						</div>
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Residential Status</p>
+            							<p class="font-21">Indian</p>
+            						</div>
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">PAN Number</p>
+            							<p class="font-21">ARMPS7807G</p>
+            						</div>
+            						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Aadhar Number<span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editPersonal('aadharNo',CtrlProfile.profileAadharNo)"></span></p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileAadharNo"></p>
+            						</div>            						            						
+            					</div>
+            				</div>
+            				<div class="tabContent" ng-if="CtrlProfile.tabProfile==='contactDetails'">
+            					<div class="row">
+            						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Mobile Number <span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editContact('mobileNo',CtrlProfile.profileMobileNo)"></span> </p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileMobileNo"></p>
+            						</div>
+            						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Landline Number <span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editContact('landlineNo',CtrlProfile.profileLandlineNo)"></span> </p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileLandlineNo"></p>
+            						</div>
+            						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 pd-btm-25">
+            							<p class="font-13 uppercase">Email Address <span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editContact('email',CtrlProfile.profileEmail)"></span> </p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileEmail"></p>
+            						</div>
+								</div>	            						
+            					<div class="row">	            						            						
+            						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-btm-25">
+            							<p class="font-13 uppercase">Communication Address<span class="glyphicon glyphicon-edit edit-icon" ng-click="CtrlProfile.editContact('commAddress',CtrlProfile.profileCommAddress)"></span></p>
+            							<p class="font-21" ng-bind="CtrlProfile.profileCommAddress"></p>
+            						</div>
+            					</div>
+            				</div>
+            				<div class="tabContent" ng-if="CtrlProfile.tabProfile==='lifeAssured' || CtrlProfile.tabProfile==='uploadDocs'">
+            					<div class="row">
+            						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-btm-25">
+            							<p class="font-21">Information to show here</p>
+            						</div>
+            					</div>
+            				</div>            				            			
+							
+							<div class="pop-overlay-edit profileDob" ng-if="CtrlProfile.profileDobShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Date Of Birth</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update the date of birth.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+                                          <!-- <div class="pd-top-30" moment-picker="CtrlProfile.dobdatepicker" format="YYYY-MM-DD" change="CtrlProfile.validateDob()">
+												<label class="field-title">Date Of Birth</label>
+												<input class="border-bottom profile-edit-input" type="text" placeholder="Select a date" ng-model="CtrlProfile.dobdatepicker" ng-model-options="{ updateOn: 'blur' }" readonly>
+											</div> -->
+											<div class="pd-top-30">
+												<label class="field-title">Date Of Birth</label>
+												<input class="border-bottom profile-edit-input myDate" type="text" placeholder="Select a date"  data-default-date="{{CtrlProfile.dobdatepicker}}"  data-min-year="1800" data-format="m-d-Y" data-large-mode="false" data-theme="my-style" data-init-set="false" ng-model="CtrlProfile.dobdatepicker" ng-change="CtrlProfile.validateDob()" readonly>
+											</div>
+																					
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableDobSave" ng-click="CtrlProfile.updateDob(CtrlProfile.dobdatepicker)">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>
+							
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileNameShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Name</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your name.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">NAME</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.editNameVal" ng-keyup="CtrlProfile.validateName()" placeholder="Enter your name">
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableNameSave" ng-click="CtrlProfile.updateName()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>							        							            				
+            						            				            				
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileGenderShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Gender</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your gender.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">GENDER</label>
+												<select class="border-bottom profile-edit-select" type="text" ng-model="CtrlProfile.editGenderVal" ng-change="CtrlProfile.validateGender()">
+													<option value="Male">Male</option>
+													<option value="Female">Female</option>
+												</select>
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableGenderSave" ng-click="CtrlProfile.updateGender()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>            				
+
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileMaritialStatusShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Maritial Status</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your maritial status.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">MARITIAL STATUS</label>
+												<select class="border-bottom profile-edit-select" type="text" ng-model="CtrlProfile.editMaritialStatusVal" ng-change="CtrlProfile.validateMaritialStatus()">
+													<option value="Divorce">Divorce</option>
+													<option value="Married">Married</option>
+													<option value="Single">Single</option>
+													<option value="Widow">Widow(er)</option>
+												</select>
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableMaritialStatusSave" ng-click="CtrlProfile.updateMaritialStatus()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>
+							
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileAadharNoShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Aadhar Number</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your aadhar number.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">Aadhar Number</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="12" numbers-only ng-disabled="!CtrlProfile.enableEditAadharNoVal" ng-model="CtrlProfile.editAadharNoVal" ng-keyup="CtrlProfile.validateAadharNo(CtrlProfile.editAadharNoVal)" placeholder="Enter aadhar number">
+												<!-- <input type="file" name="files" accept="application/pdf,image/*" capture="camera" id="aadharUpload" class="inputfile"> -->
+											</div>
+											<div class="pd-top-30" ng-if="CtrlProfile.aadharOtpShw">
+												<label class="field-title">OTP</label>
+												<input class="border-bottom profile-edit-input" type="text" numbers-only ng-model="CtrlProfile.aadharOtpVal" ng-keyup="CtrlProfile.validateAadharOtp(CtrlProfile.aadharOtpVal)" placeholder="Enter OTP">											
+											</div>
+											<div class="pd-top-30" ng-if="CtrlProfile.aadharUploadFileNameShw">
+												<label class="field-title">File Name</label>
+												<input class="border-bottom profile-edit-input" type="text" placeholder="File name" ng-model="CtrlProfile.aadharUploadFileName" disabled>											
+											</div>
+											<div class="pd-top-30" ng-if="CtrlProfile.aadharBiometricOptionsShw">
+												<label class="field-title">Options</label>
+												<select class="border-bottom profile-edit-select" type="text" ng-model="CtrlProfile.aadharBiometricOption" ng-change="CtrlProfile.biometricOption()">
+													<option value="rightThumb" ng-selected="true">Select</option>
+													<option value="rightThumb">Right Thumb</option>
+													<option value="leftThumb">Left Thumb</option>
+												</select>											
+											</div>																						
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm margin-5" ng-disabled="!CtrlProfile.enableAadharNoVerify" ng-if="CtrlProfile.verifyBiometricBtnShw" ng-click="CtrlProfile.aadhaarBIOMCall()">BIOMETRIC</button>
+												<button class="button button-lg pull-right-sm margin-5" ng-disabled="!CtrlProfile.enableAadharNoVerify" ng-if="CtrlProfile.getOtpBtnShw" ng-click="CtrlProfile.generateAadhaarOtp()">GET OTP</button>
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableAadharNoSave" ng-if="CtrlProfile.saveBtnShw" ng-click="CtrlProfile.aadharSave()">OK</button>
+												<input type="file" name="files" accept="application/pdf,image/*" id="aadharUpload" class="inputfile">
+												<button class="button button-lg pull-right-sm margin-right-20" onclick="$('#aadharUpload').click();" ng-if="CtrlProfile.uploadBtnShw" ng-click="CtrlProfile.uploadAadhar()">UPLOAD</button>
+												<button class="button button-text button-lg cancel margin-5" ng-click="CtrlProfile.aadharOtpCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>			
+														        
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileMobileNoShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Mobile Number</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your mobile number.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">Mobile Number</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="10" numbers-only ng-model="CtrlProfile.editMobileNoVal" ng-keyup="CtrlProfile.validateMobileNo()" placeholder="Enter mobile number">
+												<p class="small warning-msg pd-top-10" ng-if="CtrlProfile.notValidMobileNo">Enter valid mobile number.</p>												
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableMobileNoSave" ng-click="CtrlProfile.updateMobileNo()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>
+							
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileLandlineNoShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Landline Number</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your landline number.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">Landline Number</label>
+												<input class="border-bottom profile-edit-input" type="text" numbers-only ng-model="CtrlProfile.editLandlineNoVal" ng-keyup="CtrlProfile.validateLandlineNo()" placeholder="Enter landline number">
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableLandlineNoSave" ng-click="CtrlProfile.updateLandlineNo()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>										
+
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileEditShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Email Address</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update the existing email address with a new one.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">EMAIL ADDRESS</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.editEmailVal" ng-keyup="CtrlProfile.validateEmail(CtrlProfile.editEmailVal)" placeholder="Enter email address">
+												<p class="small warning-msg pd-top-10" ng-if="CtrlProfile.notValidEmail">This is not valid email format.</p>												
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableSave" ng-click="CtrlProfile.updateEmail()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>
+							
+							<div class="pop-overlay-edit" ng-if="CtrlProfile.profileCommAddressShw">
+								<section>
+									<article class="pop-overlay-inner">
+										<div class="myColumn-sm-5">
+											<h2 class="profile-edit-h2">Edit Communication Address</h2>
+											<p class="profile-edit-p pd-top-10 font-16">Update your communication address.</p>
+										</div>
+										<div class="myColumn-sm-6 myColumn-sm-push-1">
+											<div class="pd-top-30">
+												<label class="field-title">Company / Building Name</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.compBuildingName" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="pd-top-30">
+												<label class="field-title">Flat / Unit Number</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.flatUnitNo" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="pd-top-30">
+												<label class="field-title">Street / Area</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.streetArea" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="pd-top-30">
+												<label class="field-title">Landmark</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.landmark" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="pd-top-30">
+												<label class="field-title">Pincode</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.pincode" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="pd-top-30">
+												<label class="field-title">City</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.city" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="pd-top-30">
+												<label class="field-title">State</label>
+												<input class="border-bottom profile-edit-input" type="text" maxlength="50" ng-model="CtrlProfile.state" ng-keyup="CtrlProfile.validateCommAddress('lastName')" placeholder="Enter your communication address">
+											</div>
+											<div class="profile-edit-buttons text-right">
+												<button class="button button-lg pull-right-sm" ng-disabled="!CtrlProfile.enableCommAddressSave" ng-click="CtrlProfile.updateCommAddress()">SAVE</button>
+												<button class="button button-text button-lg cancel" ng-click="CtrlProfile.profileEditCancel()">Cancel</button>
+											</div>
+										</div>
+									</article>
+								</section>
+							</div>							
+							
+            			<div>
+            		</div>
+            	</div>
+            </div>
+        </div>
+    </section>
+</main>

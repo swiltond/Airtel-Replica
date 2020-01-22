@@ -1,0 +1,227 @@
+<article id="middleContent">
+    <div class="row pageHeading">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+            <h1 class="pageTitle">Dashboard</h1>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+            <div class="payment-dues fltrt margin-top-25">
+            	 <span>
+            	 	<h3 class="remaining-number fltlft margin-right-15">2</h3>
+					<div class="fltlft margin-right-20 margin-top-6">
+						<p class="font-16 margin-top-1 margin-bottom-0 font-weight-100">Payments Due</p>
+						<p class="remaining-category">Bill &amp; Payments</p>
+					</div>	            			
+	            </span>
+            </div>
+        </div>
+    </div>
+    <div class="row card-view-container" id="cards-sortable" ui-sortable="Ctrl.sortableOptions">
+        <div class="col-sm-4 paddnone">
+
+            <div class="card dashboard-card">
+                <a href="#/policyDetails" ng-click="Ctrl.getPolicy(19364138)">
+                    <div class="card-block">
+                        <h3 class="card-title">19364138/Force</h3>
+                        <ul class="policy-card-list">
+                            <li>
+                                <h4 class="card-text">Life Cover</h4>
+                                <span class="rupee">`</span>
+                                <span class="amnt">3,00,00,000</span>
+                            </li>
+                            <li>
+                                <div class="list-title">Product Name:</div>
+                                <div class="value">IPRU iCare II RP Option I  19364138   In Force</div>
+                            </li>                            
+                            <li>
+                                <div class="list-title">Life Assured Details:</div>
+                                <div class="value">Neeraj Sethi</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4 paddnone">
+            <div class="card dashboard-card">
+                <a href="#/policyDetails" ng-click="Ctrl.getPolicy(18730138)">
+                    <div class="card-block">
+                        <h3 class="card-title">18730138/In Force</h3>
+                        <ul class="policy-card-list">
+                            <li>
+                                <h4 class="card-text">Life Cover</h4>
+                                <span class="rupee">`</span>
+                                <span class="amnt">3,00,00,000</span>
+                            </li>
+                            <li>
+                                <div class="list-title">Product Name:</div>
+                                <div class="value">IPRU iCare II RP Option II  18730138   In Force</div>
+                            </li>                            
+                            <li>
+                                <div class="list-title">Life Assured Details:</div>
+                                <div class="value">Neeraj Sethi</div>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4 paddnone">
+            <div class="card dashboard-card">
+                <a href="#/policyDetails" ng-click="Ctrl.getPolicy(19371716)">
+                    <div class="card-block">
+                        <h3 class="card-title">19371716/Withdrawn</h3>
+                        <ul class="policy-card-list">
+                            <li>
+                                <h4 class="card-text">Life Cover</h4>
+                                <span class="rupee">`</span>
+                                <span class="amnt">80,00,000</span>
+                            </li>
+                            <li>
+                                <div class="list-title">Product Name:</div>
+                                <div class="value">IPRU iCare II RP Option I  19371716   Withdrawn</div>
+                            </li>                            
+                            <li>
+                                <div class="list-title">Life Assured Details:</div>
+                                <div class="value">Neeraj Sethi</div>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4 paddnone">
+            <div class="card dashboard-card">
+                <a href="#/policyDetails" ng-click="Ctrl.getPolicy(19369282)">
+                    <div class="card-block">
+                        <h3 class="card-title">19369282/Withdrawn</h3>
+                        <ul class="policy-card-list">
+                            <li>
+                                <h4 class="card-text">Life Cover</h4>
+                                <span class="rupee">`</span>
+                                <span class="amnt">15,00,000</span>
+                            </li>
+                            <li>
+                                <div class="list-title">Product Name:</div>
+                                <div class="value">ICICI Pru Smart Life-RP  19369282   Withdrawn</div>
+                            </li>                            
+                            <li>
+                                <div class="list-title">Life Assured Details:</div>
+                                <div class="value">Neeraj Sethi</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-8 alerts-col" id="alertsNotify">
+            <div class="alert-header alert-header-card clearfix">
+                <h4 class="fl">Alerts &amp; Notifications</h4>
+            </div>
+            <div class="policy-table inline">
+                <div class="table-slider alerts jspScrollable" id="alert-list" tabindex="0" style="overflow: hidden; padding: 0px;height: 242px !important;">
+
+                    <div class="jspContainer" style="height: 308px !important;background-color: #fff;">
+                        <div class="jspPane" style="padding: 0px; top: 0px; left: 0px;">
+                            <overlay-spinner id="alertSpinner" spinheight="174px">
+                                <div class="overlay-spinner-content">
+                                    <div class="overlay-spinner-container overlay-spinner-active-remove">
+                                        <div class="clearfix grpelem" id="u450" style="display:none;">
+                                            <!-- group -->
+                                            <div class="rounded-corners clearfix grpelem">
+                                                <!-- column -->
+                                                <div class="clip_frame colelem" id="u365">
+                                                    <!-- image -->
+                                                    <img class="block" id="u365_img" src="images/loader--multicolor-2.gif" alt="" width="48" height="48">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="si-table-content">
+                                            <ul>
+                                                <li>
+                                                    <span class="day redcolor"> Payment Due</span>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <span class="text_transform_none" compile="alerts.displayMsg">
+                            						<span>Premium of Rs. 5547.00 for policy no. 19364138 is due for debit on 30/12/16. Please maintain sufficient balance or pay before 23/12/16 and Standing instruction will not be presented.</span>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="si-table-content">
+                                            <ul>
+                                                <li>
+                                                    <span class="day redcolor"> Payment Due</span>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <span class="text_transform_none" compile="alerts.displayMsg">
+                            						<span>Premium of Rs. 5473.00 for policy no. 18730138 is due for debit on 14/12/16. Please maintain sufficient balance or pay before 07/12/16 and Standing instruction will not be presented.</span>
+                                                        </span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                	<div class="item">
+                                    	<div class="si-table-content">
+                                        	<ul>
+                                            	<li>
+                                                	<span class="day redcolor"> Open request</span>
+                                            	</li>
+                                            	<li>
+                                                	<p>
+                                                    	<span class="text_transform_none" compile="alerts.displayMsg">
+                            							<span>Request for Customer Servicing Documents received on 25/10/16 for policy number 18772141 is in process. </span><a href="" title="" class="show-alert">Click</a><span> to view.</span>
+                                                    	</span>
+                                                	</p>
+                                            	</li>
+                                        	</ul>
+                                    	</div>
+                                	</div>
+
+                                	<div class="item">
+                                    	<div class="si-table-content">
+                                        	<ul>
+                                            	<li>
+                                                	<span class="day redcolor"> Previous interactions</span>
+                                            	</li>
+                                            	<li>
+                                                	<p>
+                                                    	<span class="text_transform_none" compile="alerts.displayMsg"><a href="" title="" class="show-alert">Click</a><span> to view your previous interactions</span></span>
+                                                	</p>
+                                            	</li>
+                                        	</ul>
+                                    	</div>
+                                	</div>                                    
+                                </div>
+                            </overlay-spinner>
+                        </div>
+
+                        <div class="jspVerticalBar">
+                            <div class="jspCap jspCapTop"></div>
+                            <div class="jspTrack" style="height: 308px;">
+                                <div class="jspDrag" style="height: 135px; top: 0px;">
+                                    <div class="jspDragTop"></div>
+                                    <div class="jspDragBottom"></div>
+                                </div>
+                            </div>
+                            <div class="jspCap jspCapBottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

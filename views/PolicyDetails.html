@@ -1,0 +1,1169 @@
+<main class="policyDetails">
+    <section>
+        <div class="container">
+            <div class="row pageHeading">
+                <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h1 class="pageTitle policyDetailsTitle" ng-bind="Ctrl.myPolicyName"></h1>
+                    <a href="#/policies" class="back-arrow fas fa-chevron-left"></a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-lg-4">
+                    <div class="payment-dues fltrt margin-top-25">
+                        <span>
+							<h3 class="remaining-number fltlft margin-right-15">2</h3>
+							<div class="fltlft margin-right-20 margin-top-6">
+								<p class="font-16 margin-top-1 margin-bottom-0 font-weight-100">Payments Due</p>
+								<p class="remaining-category">Bill &amp; Payments</p>
+							</div>
+						</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="policies-data">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="policy-details-tab">
+                            <div class="tab-left-arrow">
+                                <div class="policy-tab-left fas fa-chevron-left" ng-class="{'tab-arrow-disabled': CtrlPolicyDetails.tabPrevDisabled === true}" ng-click="CtrlPolicyDetails.tabPrevPolicy()"></div>
+                            </div>
+
+                            <div class="tab-headings">
+                                <ul>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('snapShot')" ng-class="{active: CtrlPolicyDetails.tab ==='snapShot'}" ng-init="CtrlPolicyDetails.tab='snapShot';CtrlPolicyDetails.tabPrevDisabled = true;CtrlPolicyDetails.tabNextDisabled = false">Snapshot</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('members')" ng-class="{active: CtrlPolicyDetails.tab ==='members'}">Members</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('dates')" ng-class="{active: CtrlPolicyDetails.tab ==='dates'}">Dates</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('paymentModes')" ng-class="{active: CtrlPolicyDetails.tab ==='paymentModes'}">Payment Modes</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('productDetails')" ng-class="{active: CtrlPolicyDetails.tab ==='productDetails'}">Product Details</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('services')" ng-class="{active: CtrlPolicyDetails.tab ==='services'}">Services</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('actions')" ng-class="{active: CtrlPolicyDetails.tab ==='actions'}">Actions</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('others')" ng-class="{active: CtrlPolicyDetails.tab ==='others'}">Others</li>
+                                    <li ng-click="CtrlPolicyDetails.tabClick('important')" ng-class="{active: CtrlPolicyDetails.tab ==='important'}">Important</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-right-arrow">
+                                <div class="policy-tab-right fas fa-chevron-right" ng-class="{'tab-arrow-disabled': CtrlPolicyDetails.tabNextDisabled === true}" ng-click="CtrlPolicyDetails.tabNextPolicy()"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="policy-details-tab-contents">
+
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19364138 && CtrlPolicyDetails.tab==='snapShot'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Cover</p>
+                                        <p class="font-21"><span class="rupee">`</span>3,00,00,000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Assured Details</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">30 June 2035</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Status</p>
+                                        <p class="font-21">In Force</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Status</p>
+                                        <p class="font-21">Premium Paying</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Type</p>
+                                        <p class="font-21">iCare</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">IPRU iCare II RP Option I</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Number</p>
+                                        <p class="font-21">19364138</p>
+                                    </div>
+                                </div>
+<!--                                 <div class="row" style="display: flex;">
+                                	<div class="col-lg-6 col-sm-12 col-xs-12 snapshot-offers">
+                                		<div>Offers</div>
+                                	</div>
+                                	<div class="col-lg-6 col-sm-12 col-xs-12 snapshot-offers-details">
+                                		<div>offer 1</div>
+                                		<div>offer 2</div>
+                                	</div>                                	
+                                </div> -->
+                                <div class="row">
+                                	<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                		<img src="https://cdn25.vizury.com/ssp/ICICIPrulife/S2_05122017_1920x540.jpg">
+                                	</div>
+                                </div>                                
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19364138 && CtrlPolicyDetails.tab==='members'">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title margin-top-0 ">Proposal Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Gaurav kumar</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">gaurav.kumar@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9658741235</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">21/08/1982</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Life Assured Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">neeraj.sethi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9556887423</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">05/12/1970</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Nominee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Ritu Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">ritu.sethi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9775622164</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">21/01/1975</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Appointee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Anuj Shah</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">anuj.shah@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9632587741</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">26/04/1950</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Agent Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Manoj Tiwari</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">manoj.tiwari@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9825641358</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19364138 && CtrlPolicyDetails.tab==='dates'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">30 June 2035</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Next Due Date</p>
+                                        <p class="font-21">30 November 2017</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Issuance Date</p>
+                                        <p class="font-21">30 June 2015</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Last Service Request</p>
+                                        <p class="font-21">23 May 2014</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19364138 && CtrlPolicyDetails.tab==='paymentModes'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Latest Mode of Payment</p>
+                                        <p class="font-21">Infinity</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Date</p>
+                                        <p class="font-21">14 July 2014</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19364138 && CtrlPolicyDetails.tab==='productDetails'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">ICICI Pru iProtect Smart</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Paying Term</p>
+                                        <p class="font-21">15</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Frequency</p>
+                                        <p class="font-21">Yearly</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Term</p>
+                                        <p class="font-21">20</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Sum Assured <span class="rupee">(`)</span></p>
+                                        <p class="font-21">40000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium <span class="rupee">(`)</span></p>
+                                        <p class="font-21">13495</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Benifit Option</p>
+                                        <p class="font-21">Life Plus</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Option</p>
+                                        <p class="font-21">Lump-Sum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="CtrlPolicyDetails.tab==='services' || CtrlPolicyDetails.tab==='actions' || CtrlPolicyDetails.tab==='others' || CtrlPolicyDetails.tab==='important'">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pd-btm-25">
+                                        <p class="font-21">Information to show here</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===18730138 && CtrlPolicyDetails.tab==='snapShot'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Cover</p>
+                                        <p class="font-21"><span class="rupee">`</span>3,00,00,000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Assured Details</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">14 July 2039</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Status</p>
+                                        <p class="font-21">In Force</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Status</p>
+                                        <p class="font-21">Premium Paying</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Type</p>
+                                        <p class="font-21">iCare</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">IPRU iCare II RP Option II</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Number</p>
+                                        <p class="font-21">18730138</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                		<img src="https://cdn25.vizury.com/ssp/ICICIPrulife/S2_05122017_1920x540.jpg">
+                                	</div>
+                                </div>                                
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===18730138 && CtrlPolicyDetails.tab==='members'">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title margin-top-0 ">Proposal Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Abhishek gupta</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">abhishek.gupta@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9968758633</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">03/06/1989</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Life Assured Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">neeraj.sethi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9556887423</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">05/12/1970</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Nominee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Parag Kini</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">parag.kini@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9655472365</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">12/08/1986</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Appointee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Sandeep Satale</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">sandeep.satale@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9632556874</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">29/01/1962</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Agent Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Rahul roy</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">rahul.roy@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9413567412</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===18730138 && CtrlPolicyDetails.tab==='dates'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">14 July 2039</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Next Due Date</p>
+                                        <p class="font-21">14 November 2017</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Issuance Date</p>
+                                        <p class="font-21">14 July 2014</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Last Service Request</p>
+                                        <p class="font-21">13 November 2013</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===18730138 && CtrlPolicyDetails.tab==='paymentModes'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Latest Mode of Payment</p>
+                                        <p class="font-21">Cheque</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Date</p>
+                                        <p class="font-21">15 June 2014</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===18730138 && CtrlPolicyDetails.tab==='productDetails'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">ICICI Pru iProtect Smart</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Paying Term</p>
+                                        <p class="font-21">15</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Frequency</p>
+                                        <p class="font-21">Yearly</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Term</p>
+                                        <p class="font-21">20</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Sum Assured <span class="rupee">(`)</span></p>
+                                        <p class="font-21">40000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium <span class="rupee">(`)</span></p>
+                                        <p class="font-21">13495</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Benifit Option</p>
+                                        <p class="font-21">Life Plus</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Option</p>
+                                        <p class="font-21">Lump-Sum</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19371716 && CtrlPolicyDetails.tab==='snapShot'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Cover</p>
+                                        <p class="font-21"><span class="rupee">`</span>80,00,000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Assured Details</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">2 July 2020</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Status</p>
+                                        <p class="font-21">Withdrawn</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Status</p>
+                                        <p class="font-21">Proposal Status</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Type</p>
+                                        <p class="font-21">iCare</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">IPRU iCare II RP Option I</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Number</p>
+                                        <p class="font-21">19371716</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                		<img src="https://cdn25.vizury.com/ssp/ICICIPrulife/S2_05122017_1920x540.jpg">
+                                	</div>
+                                </div>                                
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19371716 && CtrlPolicyDetails.tab==='members'">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title margin-top-0 ">Proposal Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Bikash Roy</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">bikash.roy@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9898563214</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">10/02/1953</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Life Assured Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">neeraj.sethi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9556887423</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">05/12/1970</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Nominee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Appointee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Kamala Sharma</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">kamala.sharma@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9654123654</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">17/05/1978</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Agent Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Arun D'souza</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">arun.dsouza@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9756214563</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19371716 && CtrlPolicyDetails.tab==='dates'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">2 July 2020</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Next Due Date</p>
+                                        <p class="font-21">-</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Issuance Date</p>
+                                        <p class="font-21">2 July 2015</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Last Service Request</p>
+                                        <p class="font-21">19 February 2012</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19371716 && CtrlPolicyDetails.tab==='paymentModes'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Latest Mode of Payment</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Date</p>
+                                        <p class="font-21">23 January 2016</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19371716 && CtrlPolicyDetails.tab==='productDetails'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">ICICI Pru iProtect Smart</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Paying Term</p>
+                                        <p class="font-21">15</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Frequency</p>
+                                        <p class="font-21">Yearly</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Term</p>
+                                        <p class="font-21">20</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Sum Assured <span class="rupee">(`)</span></p>
+                                        <p class="font-21">40000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium <span class="rupee">(`)</span></p>
+                                        <p class="font-21">13495</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Benifit Option</p>
+                                        <p class="font-21">Life Plus</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Option</p>
+                                        <p class="font-21">Lump-Sum</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19369282 && CtrlPolicyDetails.tab==='snapShot'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Cover</p>
+                                        <p class="font-21"><span class="rupee">`</span>15,00,000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Assured Details</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">30 June 2025</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Status</p>
+                                        <p class="font-21">Withdrawn</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Status</p>
+                                        <p class="font-21">Proposal Status</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Type</p>
+                                        <p class="font-21">iCare</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">ICICI Pru Smart Life-RP</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Number</p>
+                                        <p class="font-21">19369282</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                		<img src="https://cdn25.vizury.com/ssp/ICICIPrulife/S2_05122017_1920x540.jpg">
+                                	</div>
+                                </div>                                
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19369282 && CtrlPolicyDetails.tab==='members'">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title margin-top-0 ">Proposal Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Sarita Sharma</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">sarita.sharma@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9778458762</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">16/07/1963</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Life Assured Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">neeraj.sethi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9556887423</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">05/12/1970</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Nominee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Appointee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Sheetal Lahange</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">sheetal.lahange@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9546321574</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">09/09/1966</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Agent Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Varun Das</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">varun.das@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9651452865</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19369282 && CtrlPolicyDetails.tab==='dates'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">30 June 2025</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Next Due Date</p>
+                                        <p class="font-21">-</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Issuance Date</p>
+                                        <p class="font-21">30 June 2015</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Last Service Request</p>
+                                        <p class="font-21">07 October 2012</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19369282 && CtrlPolicyDetails.tab==='paymentModes'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Latest Mode of Payment</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Date</p>
+                                        <p class="font-21">2 September 2015</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19369282 && CtrlPolicyDetails.tab==='productDetails'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">ICICI Pru iProtect Smart</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Paying Term</p>
+                                        <p class="font-21">15</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Frequency</p>
+                                        <p class="font-21">Yearly</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Term</p>
+                                        <p class="font-21">20</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Sum Assured <span class="rupee">(`)</span></p>
+                                        <p class="font-21">40000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium <span class="rupee">(`)</span></p>
+                                        <p class="font-21">13495</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Benifit Option</p>
+                                        <p class="font-21">Life Plus</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Option</p>
+                                        <p class="font-21">Lump-Sum</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19038156 && CtrlPolicyDetails.tab==='snapShot'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Cover</p>
+                                        <p class="font-21"><span class="rupee">`</span>8,00,000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Life Assured Details</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">25 October 2040</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Status</p>
+                                        <p class="font-21">In Force</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Status</p>
+                                        <p class="font-21">Premium Paying</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Type</p>
+                                        <p class="font-21"></p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21"></p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Number</p>
+                                        <p class="font-21"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-lg-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                		<img src="https://cdn25.vizury.com/ssp/ICICIPrulife/S2_05122017_1920x540.jpg">
+                                	</div>
+                                </div>                                
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19038156 && CtrlPolicyDetails.tab==='members'">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title margin-top-0 ">Proposal Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Jitendra Modi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">jitendra.modi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9875658741</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">18/01/1988</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Life Assured Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Neeraj Sethi</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">neeraj.sethi@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9556887423</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">05/12/1970</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Nominee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">NA</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Appointee Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Priyanka Goel</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">priyanka.goel@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9665478235</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Date of Birth</p>
+                                        <p class="font-21">11/06/1977</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <h1 class="policy-sub-title">Agent Details</h1>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Name</p>
+                                        <p class="font-21">Ram Shinde</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Email</p>
+                                        <p class="font-21 word-break">ram.shinde@gmail.com</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Contact Number</p>
+                                        <p class="font-21">9543621788</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19038156 && CtrlPolicyDetails.tab==='dates'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Maturity Date</p>
+                                        <p class="font-21">5 November 2045</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Next Due Date</p>
+                                        <p class="font-21">-</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Issuance Date</p>
+                                        <p class="font-21">20 June 2010</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Last Service Request</p>
+                                        <p class="font-21">2 December 2009</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19038156 && CtrlPolicyDetails.tab==='paymentModes'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Latest Mode of Payment</p>
+                                        <p class="font-21">Infinity</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Date</p>
+                                        <p class="font-21">7 August 2013</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabContent" ng-if="Ctrl.policyNumber===19038156 && CtrlPolicyDetails.tab==='productDetails'">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Product Name</p>
+                                        <p class="font-21">ICICI Pru iProtect Smart</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium Paying Term</p>
+                                        <p class="font-21">15</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Frequency</p>
+                                        <p class="font-21">Yearly</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Policy Term</p>
+                                        <p class="font-21">20</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Sum Assured <span class="rupee">(`)</span></p>
+                                        <p class="font-21">40000</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Premium <span class="rupee">(`)</span></p>
+                                        <p class="font-21">13495</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Benifit Option</p>
+                                        <p class="font-21">Life Plus</p>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+                                        <p class="font-13 uppercase">Payment Option</p>
+                                        <p class="font-21">Lump-Sum</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+<!--     			<div class="row">
+    				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 pd-btm-25">
+    					dfadf
+    					fasdfasf
+    					asfdasdfa
+    				
+    					afad
+    				</div>
+    			</div> -->
+    		</div>
+    </section>
+</main>
