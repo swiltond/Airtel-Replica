@@ -1,0 +1,371 @@
+/********* Css Custom Property Start *********/
+
+:root {
+  --ipru-main-color: #97291e;
+  --ipru-orange-color: #e77817;
+  --white-color: #fff;
+  --black-color: #000;
+  --white-smoke-color: #f6f6f6;
+  --gray80-color: #ccc;
+  --gray90-color: #e5e5e5;
+  --light-grey-color: #d4d4d4;
+  --dim-gray-color: #707070; 
+  --whisper-color: #eee;
+  --text-uppercase: uppercase;
+  --display-block: block;
+  --display-inline-block: inline-block;
+}
+
+/********* Css Custom Property End *********/
+
+@charset "utf-8";
+    
+@font-face {
+    font-family: Tondo;
+    src: url(../fonts/tondo/tondo-bold-webfont.eot);
+    src: url(../fonts/tondo/tondo-bold-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/tondo/tondo-bold-webfont.woff2) format("woff2"),url(../fonts/tondo/tondo-bold-webfont.woff) format("woff"),url(../fonts/tondo/tondo-bold-webfont.ttf) format("truetype"),url(../fonts/tondo/tondo-bold-webfont.svg#tondobold) format("svg");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: Tondo;
+  src: url(../fonts/tondo/tondo-regular-webfont.eot);
+  src: url(../fonts/tondo/tondo-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/tondo/tondo-regular-webfont.woff2) format("woff2"), url(../fonts/tondo/tondo-regular-webfont.woff) format("woff"), url(../fonts/tondo/tondo-regular-webfont.ttf) format("truetype"), url(../fonts/tondo/tondo-regular-webfont.svg#tondoregular) format("svg");
+  font-weight: 400;
+  font-style: normal; 
+}
+
+@font-face{
+	font-family:Tondo;
+	src:url(../fonts/tondo/tondo-light-webfont.eot);
+	src:url(../fonts/tondo/tondo-light-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/tondo/tondo-light-webfont.woff2) format("woff2"),url(../fonts/tondo/tondo-light-webfont.woff) format("woff"),url(../fonts/tondo/tondo-light-webfont.ttf) format("truetype"),url(../fonts/tondo/tondo-light-webfont.svg#tondolight) format("svg");
+	font-weight:100;
+	font-style:normal;
+}
+
+body {font-family: "Tondo",Helvetica Neue,Helvetica,Arial,sans-serif;margin: 0;padding: 0;color: var(--black-color);}
+input {border: 1px solid var(--gray80-color);}
+
+/********* Element/tag selectors *********/
+
+/* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+ul, ol, dl {list-style: none;padding: 0;margin: 0;}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	font-family: Tondo,Helvetica Neue,Helvetica,Arial,sans-serif;
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+/* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+a img {border: none;}
+
+/********* Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. *********/
+
+/* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+a:link {color:#414958;text-decoration: underline;}
+a:visited {color: #4E5869;text-decoration: underline;}
+/* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+a:hover, a:active, a:focus {text-decoration: none;}
+
+/* this container surrounds all other divs giving them their percentage-based width */
+.container {
+	width: 100%;
+	/*max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	/*min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background: var(--white-color);
+	padding:0;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	/* overflow: hidden; this declaration makes the .container clear all floated columns within it. */
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {float: left;width: 20%;background: var(--white-smoke-color);padding-bottom: 10px;position: fixed;border-right: 1px solid var(--gray80-color);overflow: auto;}
+.content {width: 80%;float: left;margin-left: 20%;}
+header{padding:10px 15px;position:fixed;width:80%;background-color:var(--white-color);z-index:1;top:0;}
+.headerWelcomeDiv{font-size:21px;color:var(--ipru-main-color);font-weight:bold;display:var(--display-inline-block);margin-right: 2px;margin-left: 10px;}
+.searchBar,.searchText{text-align:right;font-size:20px;color:var(--ipru-main-color);font-weight:bold;}
+.fa-search {cursor:pointer;}
+.alertIcon {margin-right: 20px;cursor:pointer;position: relative;}
+.alertIconNumber {position: absolute;top: -13px;left: 15px;background-color: red;padding: 2px;border-radius: 100%;font-size: 13px;font-weight: bold;color: white;padding-right: 5px;padding-left: 5px;}
+.searchBar a{color:var(--ipru-main-color);}
+/* This grouped selector gives the lists in the .content area space */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+	margin-top:70px;
+}
+ul.nav li {color: var(--dim-gray-color);font-size:20px;font-weight: 100;}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: var(--display-block); /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	color: var(--dim-gray-color);
+}
+ul.nav li.active a, ul.nav li  a.active, ul.nav>li>a:hover, ul.nav li img:hover, .headerSmall img, .searchIcon {color:var(--ipru-main-color);cursor:pointer;font-weight: 400;}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+}
+ul.nav li ul.subMenu{/* padding:0 10px;margin-left:15px; */}
+ul.nav li ul.subMenu li{list-style:none;font-size:18px;padding:2px 0;margin: 5px;}
+ul.nav li ul.subMenu li a{font-size:17px;display:var(--display-block);}
+ul.nav li.active a + ul.subMenu>li>a, ul.nav li:hover a + ul.subMenu>li>a{color: var(--dim-gray-color);}
+/* ul.nav li ul.subMenu li a span{display:var(--display-block);} */
+ul.nav li ul.subMenu li:hover a, ul.subMenu li.active a, ul.nav li.active a + ul.subMenu li:hover a, ul.nav li:hover a + ul.subMenu li.active a{color:var(--black-color);}
+.plans-name {padding: 0 7px;}
+
+/********* Miscellaneous float/clear classes *********/
+
+/* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+.fltrt {float: right;margin-left: 8px;}
+/* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+.fltlft {float: left;margin-right: 8px;}
+/* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+.clearfloat {clear:both;height:0;font-size: 1px;line-height: 0px;}
+.paddnone{padding:0;}
+.logo{width: 220px;margin-top: -36px;margin-left: 41px;padding: 0;background: var(--white-smoke-color);}
+@media (max-width: 1200px){#middleContent,.policyDetails,.content2{margin-top:-100px !important;}}
+@media (max-width: 380px){#middleContent{margin-top:-35px !important;}}
+@media (max-width: 770px){.pageTitle {position:relative!important;}.payment-dues {float:none;margin:0!important;}}
+.pageHeading {padding: 70px 20px;letter-spacing: -.4px;}
+h1.pageTitle{font-size:48px;padding:20px;position:absolute;top:6px;margin-left: 7px;font-weight: 100;}
+h1.policyDetailsTitle {font-size: 33px !important;top:16px !important;}
+.card-view-container{background-color:var(--whisper-color);padding:10px 22px;min-height: 100vh;}
+.card{/*-moz-box-shadow: 0px 0px 5px 1px #333333;-webkit-box-shadow: 0 0 5px 1px #333333;box-shadow: 0 0 5px 1px #333333;*/background-color:var(--white-color);/*padding:10px;*/margin:12px;/* border:1px solid var(--gray80-color); */height: 290px;overflow: hidden;width: auto;box-shadow: 0 0 10px #afafaf;}
+.card .card-block h3.card-title{padding:8px;font-size:23px;font-family: "Tondo",Helvetica Neue,Helvetica,Arial,sans-serif;}
+.card .card-block .card-text{padding:0; font-size:17px;}
+.card .card-block .card-btn{text-align:center;margin-bottom: 6px;}
+.card .card-block .card-btn a.btn, .card .card-block .card-btn a.btn:visited{text-align:center; color:var(--white-color);text-decoration:none;border-radius:0;font-size:16px;background-color:var(--ipru-main-color);border:0;}
+
+
+/********* SWILTON Start*********/
+
+/********* Common Styles Start *********/
+
+.uppercase {text-transform: var(--text-uppercase);}
+.text-right {text-align: right;}
+.font-weight-100 {font-weight: 100;}
+.word-break {word-wrap: break-word;}
+.font-13 {font-size:13px !important;}
+.font-15 {font-size:15px !important;}
+.font-16 {font-size:16px;}
+.font-21 {font-size:21px;}
+.float-right {float:right}
+.margin-5 {margin:5px}
+.margin-top-0 {margin-top:0 !important}
+.margin-top-1 {margin-top:1px}
+.margin-top-6 {margin-top:6px}
+.margin-top-25 {margin-top:25px}
+.margin-right-15 {margin-right:15px}
+.margin-right-20 {margin-right:20px}
+.margin-bottom-0 {margin-bottom:0px}
+.pd-top-0 {padding-top: 0!important;}
+.pd-top-10 {padding-top: 10px;}
+.pd-top-30 {padding-top: 30px;}
+.pd-btm-0 {padding-bottom: 0px !important;}
+.pd-btm-25 {padding-bottom: 25px;}
+.pd-btm-30 {padding-bottom: 30px;}
+.border-bottom {border-bottom: 1px solid var(--light-grey-color) !important;}
+.text_transform_none {text-transform: none !important;}
+.warning-msg {color: #b55808;}
+.bodyNoScroll {position:fixed;overflow:hidden;}
+input[type="file"] {display: none;opacity: 0;overflow: hidden;z-index: -1;}
+.small {font-size: 12px!important;line-height: 1.58;letter-spacing: .8px;padding-left: 0;padding-right: 0;}
+@media screen and (min-width: 768px){.pull-right-sm {float: right;}}
+
+/********* Common Styles End *********/
+
+/********* Buttons Styles Start *********/
+
+.button {display: var(--display-inline-block);margin-bottom: 0;font-weight: 100;text-align: center;text-transform: var(--text-uppercase);font-smoothing: antialiased;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;transition: .5s;letter-spacing: 2px;vertical-align: middle;border: none;touch-action: manipulation;cursor: pointer;border-radius: 0;background-image: none;white-space: nowrap;padding: 17px 40px;font-size: 20px;line-height: 1.3333333;color: var(--white-color);background-color: var(--ipru-main-color);border-color: #df0000;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+.button-lg {padding: 17px 40px;font-size: 20px;line-height: 1.3333333;}
+.button[disabled] {pointer-events: none;color: var(--black-color);background: var(--light-grey-color);cursor: not-allowed;opacity: .65;box-shadow: none;}
+.button-text {padding: 0;margin: 12px 30px!important;box-shadow: none!important;background: transparent;color: var(--ipru-main-color);outline: none;}
+.button-text.button-lg {margin: 16px 30px!important;}
+@media (max-width: 767px){.button {width: 100%;padding-left: 0;padding-right: 0;}.button-text.button {margin-left: 0!important;margin-right: 0!important;}.button-text.button-lg {margin: 16px 0!important;}}
+
+/********* Buttons Styles End *********/
+
+/********* Font Awesome Styles Start *********/
+
+/* .fab {font-size: 17px;width: 35px;padding: 8px;text-align: center;border-radius: 50%;text-decoration: none !important;background: var(--ipru-main-color);color: var(--white-color) !important;} */
+.fab {font-size: 17px;width: 36px;padding: 9px;text-align: center;border-radius: 50%;text-decoration: none !important;background: var(--ipru-main-color);color: var(--white-color) !important;}
+/* .fab {font-size: 17px;width: 30px;padding: 5px;text-align: center;border-radius: 10%;text-decoration: none !important;background: var(--ipru-main-color);color: var(--white-color) !important;} */
+.fa-facebook-f {background: #3B5998;}
+.fa-twitter {background: #55ACEE;}
+.fa-google-plus-g {background: #dd4b39;}
+.fa-instagram {background: #125688;}
+.fa-youtube {background: #bb0000;}
+.fa-yahoo {background: #430297;}
+.socialIconsInactive {background: var(--gray80-color);}
+.social-networking {display: inline;margin-left: 10px;}
+.fab:hover {background-color:var(--ipru-orange-color) !important;color;cursor:pointer}
+.health-icon {color: #08486f;font-size: 24px;padding-left: 5px;padding-right: 5px;vertical-align: middle;}
+
+/********* Font Awesome Styles End *********/
+
+h3.remaining-number {font-size: 48px; padding-right:0px; margin-right: 0px;font-weight: 100;}
+.remaining-category {font-size:12px !important;color:var(--dim-gray-color)}
+ul.nav li a.policies-txt, ul.nav li a.services-txt {display: var(--display-inline-block);}
+.headerWelcomeArrowDown {width: 15px;margin-bottom: 5px;}
+.rupee {font-family: IndianRupee;}
+span.amnt {margin-left:-4px}
+.policy-card-list {padding: 0 !important;/* border-top: 1px solid var(--gray90-color) */;/*margin-bottom: 15px;*/}
+/* .policy-card-list li:first-child {color: var(--white-color);background-color:var(--ipru-main-color);background-repeat: no-repeat;background-size: cover;font-size: 40px;font-family: ZurichBT-Bold;} */
+/* .policy-card-list li:first-child {color: var(--white-color);background-color:var(--ipru-main-color);background-repeat: no-repeat;background-size: cover;font-size: 40px;} */
+.policy-card-list li:first-child {color: var(--ipru-main-color);background-repeat: no-repeat;background-size: cover;font-size: 35px;font-weight: 500;padding-bottom: 0;}
+.policy-card-list li {padding: 15px;/* border-bottom: 1px solid var(--gray80-color) */;color: #444;font-size: 15px;padding-top: 12px;}
+/* .policy-card-list li:first-child h4 {font-family: ZurichBT-Roman;margin-bottom: 0;} */
+.policy-card-list li:first-child h4 {margin-bottom: 0;}
+/* .policy-card-list li .value {font-family: ZurichBT-Roman;font-size: 25px;width: auto;display: var(--display-inline-block);} */
+.policy-card-list li .value {font-size: 25px;width: auto}
+#middleContent, .content2, .policyDetails  {padding-top:0px; margin-top: -152px;}
+.policy-content {display:var(--display-block) !important}
+.arrow-right {font-size: 40px;color: var(--ipru-main-color);cursor: pointer;}
+.arrow-left {font-size: 20px;color: var(--ipru-main-color);cursor: pointer;}
+.policy-list {background-color: var(--whisper-color);padding: 40px;min-height: 100vh;}
+.policy-row {background-color: var(--white-color);margin-bottom: 20px;box-shadow: 0 0 10px #afafaf;}
+.policyContent {border: 1px solid #999;margin: 13px;padding: 10px;}
+.policy-item {padding: 12px 0px;}
+.policy-name {color: var(--dim-gray-color);font-size:13px;text-transform: var(--text-uppercase);}
+.policy-value {margin-top:-4px;}
+.border-top-gray {border-top: 1px solid #999 !important;}
+.policies-data {background-color: var(--whisper-color);min-height: 100vh;}
+.policyContent {background-color: var(--white-color);}
+ul.nav li ul li a:hover {color: var(--ipru-main-color) !important;}
+ul.nav li ul li a span.more-policies-option:hover {color: var(--ipru-orange-color) !important;}
+.more-policies-option {margin-left: 90px;color: var(--ipru-main-color);}
+.userOptions {position: absolute;left: 70px;top: 33px;z-index: 9;float:left;min-width: 160px;padding: 0px !important;margin: 2px 0 0;font-size: 16px;font-weight: 400;text-align: left;background: var(--white-color);border: 1px solid #bbb;border-radius: 0;box-shadow: 3px 3px 2px rgba(0,0,0,.09);background-clip: padding-box;}
+.userOptions li:hover {background-color: var(--ipru-main-color);}
+.userOptions li:hover a {color:var(--white-color);}
+.userOptions>li>a {padding: 3px 20px;display: var(--display-block);text-decoration:none;}
+.dashboard-card:hover {transform: scale(1.1);transition-duration: .3s;cursor:pointer;border: 1px solid #66afe9 !important;outline: 0;box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6) !important;}
+.dashboard-card:hover .policy-card-list li:first-child {color: var(--ipru-orange-color);}
+.dashboard-card:hover .card-title, .dashboard-card:hover .value, .dashboard-card:hover .list-title{color: var(--ipru-main-color);}
+.dashboard-card a {text-decoration: none;}
+.policy-details-tab{overflow: hidden;background-color: var(--white-color);display: inline-flex;width: 100%;border-bottom: 1px solid var(--gray90-color);}
+.policy-details-tab ul li, .policy-tab-left, .policy-tab-right {background-color: inherit;border: none;outline: none;cursor: pointer;padding: 11px 40px;transition: 0.3s;font-size: 16px;position: relative;color: var(--dim-gray-color);border-right: 2px solid var(--white-color);text-transform: var(--text-uppercase);}
+.policy-details-tab-contents .tabContent, .profile-tab-contents .tabContent{border-top: none;padding: 15px;background-color: var(--white-color);padding-top: 50px;padding-bottom:0}
+.policy-details-tab ul{padding: 0;display: flex;white-space: nowrap;}
+.snapshot-offers {font-size: 36px;padding: 50px;background: var(--ipru-orange-color);color: var(--white-color);}
+.snapshot-offers-details {font-size: 25px;padding: 58px;background: var(--ipru-main-color);color: var(--white-color);}
+
+.policy-details-card {margin:0;border: none;padding-top: 40px;}
+.policy-details-card a {text-decoration: none;}
+.policy-name-head {border-bottom: 2px solid var(--ipru-main-color);margin-bottom: 30px;padding-bottom: 10px;font-size: 25px;}
+.policy-card-list li .value {font-size: 17px;}
+.policy-card-list li div.list-title {text-transform: var(--text-uppercase);color: var(--dim-gray-color)!important;font-size: 13px;}
+.policy-details-tab ul li:after {content: "";background: var(--black-color);height: 0;bottom: 0;transition: .1s;left: 0;position: absolute;right: 0;color: var(--black-color);}
+.policy-details-tab ul li.active:after{background-color:var(--ipru-main-color);height: 4px;}
+.policy-details-tab ul li.active{color:var(--ipru-main-color);}
+.policy-details-tab ul li:hover:after{height: 2px;}
+
+.policy-sub-title {margin-top: 25px;margin-bottom: 16px;font-weight: bold;border-bottom: 1px solid var(--gray80-color);padding-bottom: 11px;font-size: 17px;text-transform: var(--text-uppercase);}
+.arrow-right:hover{transform: scale(1.3);transition-timing-function: ease-in-out;transition-duration: .5s;cursor: pointer;outline: 0;margin-left: 13px;}
+.back-arrow {text-decoration:none!important;font-size: 32px;position: absolute;left: 16px;top: 39px;color: var(--dim-gray-color) !important;}
+.back-arrow:hover {color:var(--ipru-main-color)!important;cursor:pointer;transform: scale(1.3);transition-duration: .3s;}
+.loader {padding: 0;z-index: 100000;position: fixed;left: 0;top: 0;/*background: hsla(0,0%,90%,.97);*/background: #f8f7f7;height: 100%;width: 100%;opacity: 0.9;}
+.loader:before {height: 50px;width: 1152px;content: '';display: var(--display-block);margin: 0 auto;}
+.loader .container {position: relative;max-width: 1190px;margin: 0 auto;padding-left: 15px;padding-right: 15px;/*background: hsla(0,0%,90%,.97);*/background: #f8f7f7;}
+@media (min-width: 768px){.loader .container{width: 96%;}}
+/* h2.loader-heading {margin: 20px 0 0 -6px;font-size: 80px;font-weight: 100;font-family: ZurichBT-Roman;color: var(--black-color);text-transform: none!important;line-height: 90px;} */
+h2.loader-heading {margin: 50px 0 0 -6px;font-size: 80px;color: var(--black-color);text-transform: none!important;line-height: 90px;font-weight: 100;}
+.loader-spinner {font-size: 85px;color: var(--ipru-main-color);margin-left: 25px;}
+.color-maroon {color:var(--ipru-main-color)}
+.nav-bar-toggle {display:var(--display-inline-block);font-size:20px;cursor:pointer;margin-right: 9px;position: fixed;}
+.nav-bar-toggle:hover, .mobile-nav-bar:hover {transform: scale(1.3);transition-duration: .3s;color: var(--ipru-main-color)}
+.navCloseContent {margin-left:0%;width: 100%!important;}
+.navCloseSidebar {display:none}
+.navOpenContent {margin-left:20%;width: 80%!important;}
+.navOpenSidebar {width: 20%!important;}
+.navOpenHeader {width:80%}
+.navCloseHeader {width:100%}
+.mobile-nav-logo {z-index: 1;background-color: var(--white-smoke-color);position: fixed;}
+.large-nav-logo {display:inline}
+.mobile-nav-bar {display: var(--display-inline-block);font-size: 20px;cursor: pointer;margin-left: 14px;margin-top: 13px;}
+@media (max-width: 770px){.navOpenSidebar {width:100%!important;}.navOpenContent {display:none;}.navOpenSidebar {float:left;}}   
+//@media (max-width: 770px){.navContentMobile {display: var(--display-block);margin-left:0%!important;width: 100%!important;};}   
+//@media (max-width: 770px){.navSidebarMobile {display:none!important;}}
+
+@media (min-width: 767px){.policies-arrow {float:right;};}
+@media (max-width: 767px){.policies-arrow {float:left;}.pop-overlay-inner {padding-top: 0!important;}}
+
+.tab-left-arrow:hover, .tab-right-arrow:hover, .tab-left-arrow:hover .policy-tab-left, .tab-right-arrow:hover .policy-tab-right {background-color: var(--gray80-color); color:var(--ipru-main-color);font-weight: bold;}
+.tab-arrow-disabled {opacity: .25;cursor: default !important;}
+.tab-arrow-disabled:hover {background-color: inherit !important;}
+.logo-expand-screen {position: fixed;z-index: 1;width: 220px;top: 5px;margin-left: 26px;}
+.welcome-expand-screen {margin-left:255px;position: relative;display: var(--display-inline-block);}
+@media (max-width: 770px) {.logo-expand-screen {width: 170px !important;}.headerWelcomeDiv {font-size: 18px;}.welcome-expand-screen {margin-left:185px;}.searchText input{width: 163px;}}
+.profile-img-section {/* position: absolute;top: -7px;left: 10px; */ display:inline}
+.edit-img-section {position:relative}
+.uploadProfileImg {position: absolute;top: 0;width: 137px;opacity: 0;height: 40px;cursor: pointer;right: 0;display: block !important;z-index: 0 !important;}
+.img-profile-camera {position: absolute;top: 104px;right: 4px;background-color: var(--ipru-main-color);padding: 9px;border-radius: 50%;color: #fff;cursor:pointer;overflow: hidden;}
+.img-profile-camera > i {font-size: 18px;}
+.edit-img-profile {width: 140px;height: 140px;}
+.img-profile, .edit-img-profile  {border-radius: 50%;}
+.largeImgProfile {width: 80px;height: 80px;}
+.smallImgProfile {width: 40px;height: 40px;}
+.smallHeader {border-bottom: 1px solid var(--gray90-color);}
+.largeHeader {border-bottom: none;}
+.largeSearchBar {padding-top: 25px;}
+.smallSearchBar {padding-top: 0px;}
+.largeUserOptions {left: 105px;top: 50px;}
+.smallUserOptions {left: 70px;top: 33px;}
+.largeHeaderWelcomeDiv {font-size: 24px;}
+.smallHeaderWelcomeDiv {font-size: 21px;}
+
+.img-profile, .headerWelcomeDiv span, .searchBar, .searchText  {-webkit-transition: 0.3s linear all;-moz-transition: 0.3s linear all;-o-transition: 0.3s linear all;transition: 0.3s linear all;}
+.displayNone {display:none;}
+.displayBlock {display:var(--display-block);}
+
+.tab-left-arrow,.tab-right-arrow,.tab-headings {display: var(--display-inline-block);}
+.tab-left-arrow,.tab-right-arrow {padding-top: 5px;}
+.tab-headings {overflow: hidden;}
+.tab-right-arrow {float:right;margin: 0 auto;margin-right: 0px;}
+.policy-tab-left, .policy-tab-right {padding: 10px 13px !important;border:none!important}
+@media (max-width: 1300px){.logo {width:111px;margin-top: -24px;} .mobile-nav-bar {top:5px;font-size:17px}}
+.alerts-col {padding:15px !important}
+.si-table-content ul {padding: 0 10px !important;}
+.item:nth-child(odd) .si-table-content ul {background-color: var(--white-color) !important;}
+.alerts .si-table-content ul li {height:inherit !important;}
+.alert-header h4 {padding:0;font-family: "Tondo",Helvetica Neue,Helvetica,Arial,sans-serif}
+.alerts .day {font-family: "Tondo",Helvetica Neue,Helvetica,Arial,sans-serif}
+.edit-icon {padding-left: 12px;color: var(--ipru-main-color);cursor: pointer;}
+.edit-icon:hover {color: var(--ipru-orange-color);transform: scale(1.3);transition-duration: .3s;}
+.pop-overlay-inner {padding-top: 50px;}
+.pop-overlay-edit {position: fixed;animation: sectionflipdownNav .5s linear;background: var(--white-color);top: 0;right: 0;min-height: 100%;left: 0;overflow: auto;height: 100%;width: 100%;z-index: 999;}
+.pop-overlay-edit section {padding-top: 60px;padding-bottom: 60px;position: relative;}
+.pop-overlay-edit section article{max-width: 100%;position: relative;margin-left: auto;margin-right: auto;padding-top: 50px;margin: 0 auto;padding-left: 15px;padding-right: 15px;}
+@media (min-width: 768px){section article {width: 96%;} .myColumn-sm-5 {width: 41.6666666667%;float: left;} .myColumn-sm-6 {width: 50%;float: left;} .myColumn-sm-push-1 {left: 8.3333333333%;}}
+.myColumn-sm-5, .myColumn-sm-6 {position: relative;min-height: 1px;padding-left: 15px;padding-right: 15px;}
+.field-title {font-weight: 100;color: var(--dim-gray-color);text-align: left;font-size: 11px;line-height: 15px;letter-spacing: .01em;text-transform: var(--text-uppercase);display: var(--display-block);margin-bottom: 0;}
+.profile-edit-input, .profile-edit-select {font-size: 16px;font-weight: 100;color: var(--black-color);width: 100%;background: transparent;border: none;border-radius: 0;padding: 0;position: relative;vertical-align: middle;z-index: 1;height: 36px;outline: none;max-width: 260px;}
+.profile-edit-select {background-image: url(../images/down-arrow3.png);background-repeat: no-repeat;background-position: right 5px center;}
+.profile-edit-select option{font-size: 20px;font-weight: 100;}
+.profile-edit-buttons {margin: 34px 0;}
+.profile-edit-h2 {margin: 0;font-size: 80px;line-height: 80px;letter-spacing: -.8px;font-weight: 100;color: inherit;padding-right: 0px;padding-left: 0px;}
+.profile-edit-p {padding-right: 0px;padding-left: 0px;font-weight: 100;}
+@media screen and (max-width: 767px){.profile-edit-h2 {font-size: 48px;line-height: 50px;letter-spacing: -.4px;}}
+.alert-header-card {background-color: var(--ipru-main-color);border-bottom: 2px solid var(--ipru-main-color);}
+@media (max-width: 1199px){.profile-edit-h2 {font-size: 48px;line-height: 50px;letter-spacing: -.4px;}}
+@media screen and (max-width: 992px){.pop-overlay-edit section {padding-top: 30px;padding-bottom: 30px;}}
+.services-img {float: left;}
+.services-name {vertical-align: middle;display: block;margin-left: 45px;margin-top: 6px;}
+.protection-policy-name {padding-left: 43px;}
+.protection-count {background-color: red;padding: 2px;border-radius: 100%;font-size: 13px;color: white;padding-right: 5px;padding-left: 5px;}
+
+/********* SWILTON End*********/

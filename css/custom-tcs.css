@@ -1,0 +1,1069 @@
+/* @font-face {
+    font-family:'RupeeForadian-Regular';
+    src: url('../fonts/RupeeForadian_gdi.eot');
+    src: url('../fonts/RupeeForadian_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RupeeForadian_gdi.woff') format('woff'),
+        url('../fonts/RupeeForadian_gdi.ttf') format('truetype'),
+        url('../fonts/RupeeForadian_gdi.svg#RupeeForadian-Regular') format('svg');
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-FB02;
+}
+ */
+.second-nav .secondary-navigation >li> a{text-transform:capitalize !important;}
+.icicilogo a{cursor:pointer;}
+/*Menu Text Transform Changed -- Avinash */
+.navbar-toggle{top:0;}
+.navbar-collapse.collapse.in{z-index:99;}
+.second-nav li{padding:0 !important;}
+.second-nav .secondary-navigation >li> a{text-transform:capitalize !important; padding:10px 30px  !important;}
+.second-nav .secondary-navigation >li> a span{text-transform:lowercase !important;}
+
+#Policy_accordion .panel, #Policy_accordion .panel-default{border-radius:0px; border:0px; margin-bottom:10px;} 
+#Policy_accordion .panel-heading{padding:0px; margin:0px; border-radius:0px;}
+#Policy_accordion .panel-body {
+background-size: 100%;
+border: 2px solid #f3f3f3;
+height: auto;
+padding: 0;
+}
+
+
+
+#Policy_accordion .panel-heading h4 a.collapsed{background-image: url("../images/tabbg.jpg");background-size: cover; color: #444; border-radius:0px; display:block}
+
+#Policy_accordion .panel-heading h4 a,  #Policy_accordion .panel-heading h4 a:hover{display: block; padding:15px 10px 12px;background-image: url("../images/tab-bghover.jpg");background-size: cover;color: #fff;font-family: ZurichBT-Bold;font-size: 18px;position: relative;}
+
+#Policy_accordion .panel-heading h4 a:before{content: "";display: inline-block;position: absolute;right: 13px;top: 7px;height: 30px;width: 30px;border:2px solid #fff;border-radius: 50%;}
+#Policy_accordion .panel-heading h4 a:after{content: "\e253";display: inline-block;text-align: right;position: absolute;right: 21px;top: 15px;font-family:'Glyphicons Halflings';font-size: 12px;color: #fff;}
+#Policy_accordion .panel-heading h4 a.collapsed:after{content: "\e252";display: inline-block;text-align: right;position: absolute;right: 21px;top: 17px;font-family:'Glyphicons Halflings';font-size: 12px;}
+/* .rupee{font-family:'RupeeForadian-Regular',arial,'sans-serif';} */
+
+.icon_a_disabled { opacity : 0.5; cursor: not-allowed !important;}
+.action-list li a.icon_a_disabled span:after { background-color:transparent !important; }
+
+
+/*
+#Policy_accordion .panel-heading h4 a {background-color: #08486f;
+    background-image: url(../images/up-icon.png);
+    background-position: 97% center;
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: block;
+    font-family: ZurichBT-Bold;
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 15px;
+    width: 100%;
+}
+
+*/
+
+.pay-table-content ul li a,.si-table-content ul li a{width: 100% !important;} /* Added for Nishant -- Investment view table distort */
+/* .dashboard_servicesPanel { border:1px solid #ccc; } */ /* changed by Gajanan */
+.dashboard_servicesPanel .action-links { border:none; }
+.item .pay-table-content a { color:#004a80; background:none; width:auto !important; }
+/* .item .pay-table-content a:hover { color:#a41c2b; } */
+a.premium:hover {color:#a41c2b;} /*For hover*/
+
+.action-links li a img{float:left;}
+
+.switch-inpts .dropdwn select {width: 100%;display: inline-block;background-image: url('../images/down-arrow2.png');background-repeat: no-repeat;background-position: 95% center;}
+
+
+
+/*----------------------------CSS for All Services Page for Fund Allocation Section--------------------------*/
+
+img {border: none;height: auto;max-width: 100%;}
+.banner-overlay {background-image: url(../images/banner-trans-bg.png);background-repeat: repeat;position: absolute;width: 100%;z-index: 99;}
+.banner-img {overflow: hidden;}
+.center-block { margin-top: 0px;}
+.banner figure { font-family: ZurichBT-Roman;position: relative;}
+.banner1 figcaption {bottom: 80px;left: 0;margin: 0 auto;position: absolute;right: 0; width: 1140px;}
+.banner1 h1 {font-family: ZurichBT-Bold;font-size: 36px;margin-bottom: 5px;margin-top: 0;width: 60%;}
+.txt {color: #444;font-family: ZurichBT-Roman;font-size: 1.8em;}
+.all-services .plan-details {display: block;}
+.all-services .plan-details.panel-group .panel {border: 0;}
+/* .panel-group .panel {border-radius: 0;border: 0;} */
+.plan-details .panel-heading h4 a{background-color:#08486f;background-image:url(../images/up-icon.png);background-position:97% center;background-position:right 15px center;background-repeat:no-repeat;color:#fff;display:block;font-family:ZurichBT-Bold;font-size:20px;line-height:1.4;padding:15px;width:100%;}
+.plan-details .panel-heading h4 a.collapsed,.document-accord .panel-heading h4 a.collapsed{background-image:url(../images/down-icon.png);}
+.plan-details .panel-heading{padding: 0;}
+.plan-details .panel-heading h4 a.collapsed{background-image: url(../images/down-icon.png);}
+/* .panel-group .panel+.panel {margin-top: 10px;} */
+.plan-details .panel-body{padding: 0;}
+.service-box{-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease;-webkit-transition:all .3s ease;background-color:#f5f5f5;border:1px solid #e6e6e6;height:140px;overflow:hidden;padding:15px;position:relative;transition:all .3s ease;}
+.all-services .plan-details .accor-box {height: auto;border-bottom: 0;}
+.all-services .accor-box {height: auto;border-bottom: 0;}
+.all-services .accordion ul  .accor-content{padding: 20px 0px;border: none;}
+.accor-box {height: 280px;overflow: hidden;padding: 20px;position: relative;}
+.icon-handle{display:inline-block;vertical-align:middle;width:33%;}
+.link-text{color:#444;display:inline-block;font-family:ZurichBT-Roman;font-size:18px;padding-left:30px;vertical-align:middle;width:65%;}
+.link-text .small-text{font-size:14px;}
+.slide-contentv2{-moz-transform:translateX(65%);-moz-transition:all .3s ease;-ms-transform:translateX(65%);-ms-transition:all .3s ease;-o-transform:translateX(65%);-o-transition:all .3s ease;-webkit-transform:translateX(65%);-webkit-transition:all .3s ease;background-color:#f58220;filter:alpha(opacity=0);height:100%;opacity:0;position:absolute;right:0;top:0;transform:translateX(65%);transition:all .3s ease;width:65%;z-index:10;}
+.slide-contentv2 .txt-handle{color:#fff;display:inline-block;font-family:ZurichBT-Bold;font-size:18px;height:86px;overflow:hidden;padding:10px 0;position:relative;text-align:center;vertical-align:middle;width:100%;}
+.slide-contentv2 .txt-abs{-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);left:50%;padding:0 10px;position:absolute;top:50%;transform:translate(-50%,-50%);width:100%;}
+align:middle;width:100%;}
+
+.slide-contentv2 .btn-holder{bottom:10px;position:absolute;width:100%;}
+
+.prod-list .inner-footer,.service-box.inview{padding-left:10px;}
+.slide-contentv2.inview{-moz-transform:translateX(0);-ms-transform:translateX(0);-o-transform:translateX(0);-webkit-transform:translateX(0);filter:alpha(opacity=100);opacity:1;transform:translateX(0);}
+.center-content{color:#444;font-family:ZurichBT-Bold;font-size:24px;margin:20px auto;text-align:center;width:100%;}
+.center-content .r-border{background-color:#b02a30;display:inline-block;float:left;height:2px;margin-top:18px;width:40%;}
+.center-content span.center-txt{display:inline-block;float:left;padding:0 10px;width:20%;}
+.assist-links{margin:20px 0;text-align:center;}
+.assist-box{border:2px solid #dfdfdf;display:inline-block;height:70px;margin-right:15px;overflow-y:hidden;padding:5px;position:relative;width:100%;}
+.assist-box .emailbox{width:85%;}
+.assist-box a{display:block;text-align:center;}
+.assist-box div{display:inline-block;margin-left:5px;text-align:left;vertical-align:middle;width:65%;}
+.assist-box div h4{color:#b02a30;font-family:ZurichBT-Bold;font-size:22px;margin-bottom:0;margin-top:0;}
+.assist-box div p{display:inline-block;font-size:16px;margin:0;vertical-align:middle;width:72%;}
+.assist-box div span{color:#f58220;font-size:15px;}
+.assist-box div span.btn{color:#fff;min-width:100px;vertical-align:middle;}
+.assist-boxv1{width: 225px;}
+.assist-boxv1 div{width: auto;}
+/* .modal-content{background-color:#f5f5f5;border:0;height:90%;max-height:585px;border-radius: 6px;} */
+.assist-links .modal .modal-content{height: 100%;margin: 30px auto;max-height: none;}
+/* .modal-header, .modal-footer {border: 0;text-align: center;} */
+.assist-links .modal .modal-body {height: 100%;padding: 0;}
+/* .modal-header .close{font-size:45px;margin-top:-10px;} */
+.assist-links .modal-header h3{margin: 0;}
+.assist-links .modal .modal-body{height: 100%;padding: 0;}  
+.assist-links .modal .modal-content{height: 100%;margin: 30px auto;max-height: none;}
+.inpt-txt{display:inline-block;margin-bottom:10px;margin-right:20px;position:relative;vertical-align:middle;width:100%;}
+input[type="text"] {outline: 0;-webkit-user-modify: read-write-plaintext-only;}
+.input-field {border-radius: 0;color: #444;display: inline-block;font-family: ZurichBT-Roman;font-size: 18px;height: 43px;position: relative;text-align: left;vertical-align: middle;}
+.inpt-txt label{-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease;-webkit-transition:all .3s ease;background-color:#fff;font-family:ZurichBT-Roman;font-size:18px;font-weight:400;left:10px;position:absolute;top:10px;transition:all .3s ease;}
+.mandate {color: #ef1005;}
+.inpt-txt select{color:#444;font-family:ZurichBT-Roman;font-size:18px;height:43px;overflow:hidden;padding:0 15px;text-overflow:ellipsis;white-space:nowrap;width:100%;}
+.inpt-txt select.dropdown2{padding:5px 40px 5px 5px;outline: 0;}
+select.dropdown2{-moz-appearance:none;-webkit-appearance:none;border:1px solid #ccc;text-indent:1px;background-image:url(../images/down-arrow1.png);background-position:97% center;background-position:right 15px center;background-repeat:no-repeat;}
+.inpt-txt select option{color: #444;}
+textarea.form-control{border-radius:0;font-family:ZurichBT-Roman;font-size:18px;height:80px;resize:none;width:100%;padding: 5px 10px;}
+.slide-contentv2 .txt-handle span.small-text{display:block;font-family:ZurichBT-Roman;font-size:14px;margin-bottom:0;margin-top:0;}
+.banner-popup{background-color:#fff;border:2px solid #b02a30;border-radius:10px;bottom:115%;color:#7c7c7c;display:none;left:0;padding:15px;position:absolute;width:160%;z-index:100;}
+/* .inpt-txt .err-msg {color: #ef1005;  display: none; font-family: ZurichBT-Roman;font-size: 12px;left: 0;position: absolute;width: 100%;} */
+.panel-default>.panel-heading+.panel-collapse>.panel-body, .nav-tabs{border: 0;}
+.inpt-txt input:focus ~ label, .inpt-txt input.active ~ label, .inpt-txt select:focus ~ label, .inpt-txt select.active ~ label{font-size: 14px;top: -10px;}
+.inpt-txt .input-field.invalid, .jplist-panel input[type="text"].invalid, .login-box > .usr-input > div > input.invalid, .banner-popup input[type=text].invalid{border: 1px solid #ef1005;}
+
+@media (max-width: 1599px) and (min-width: 1400px){
+.banner-img img {left: -17%;max-width: none;position: relative;width: 130%;}
+}
+@media (max-width: 1900px) and (min-width: 1200px){
+.center-content .r-border {width: 32%;}
+.center-content span.center-txt {width: 36%;}
+}
+/* @media (max-height: 590px){
+.modal-content {height: 98%;margin: 1% 0;}
+} */
+@media (max-width: 992px){
+.content.all-services{margin-top: 55px;}
+.banner figcaption .txt, .center-content {font-size: 20px;}
+.banner1 figcaption {left: 0;position: absolute;right: 0;bottom: 80px;margin: 0 auto;}
+.banner figcaption {bottom: 80px;margin-left: 30px;width: 720px;}
+.slide-contentv2 {-moz-transform: translateX(0);-ms-transform: translateX(0);-o-transform: translateX(0);-webkit-transform: translateX(0);filter: alpha(opacity=100);opacity: 1;transform: translateX(0);}
+.slide-contentv2 .txt-handle {font-size: 16px;}
+.btn {font-size: 14px;font-weight: 700;height: auto;}
+.txt {font-size: 1.6em;}
+.center-content .r-border {margin-top: 15px;width: 29%;}
+.assist-box{height:120px;}
+.assist-box a{height:110px;text-align:center;}
+.assist-box div{text-align:center;width:100%;}
+.assist-box div h4{font-size:16px;margin-top:10px;}
+.assist-box div p{font-size:14px;width:100%;}
+.assist-box div.emailbox{text-align:left;width:75%;}
+.assist-links{overflow:auto;}
+.assist-links .assist-box{border-right:0;}
+.assist-links .assist-box:last-child{border-right:2px solid #dfdfdf;}
+.assist-links .assist-box {float: none;margin: 0;width: 100%;}
+
+p {font-size: 14px;width: 100%;}
+.inpt-txt label {font-size: 16px;}
+}
+
+
+@media (max-width: 991px) and (min-width: 768px){
+.banner1 .banner-img img {left: -50%;max-width: none;position: relative;width: 200%;}
+.banner h1 {font-size: 3em;}
+.center-content span.center-txt {width: 42%;}
+.assist-links {overflow: auto;}
+.assist-links .assist-box:last-child {border-right: 2px solid #dfdfdf;}
+
+/* .pay-table-title ul li,.pay-table-content ul li{width: 21%;text-align: center;}
+.pay-table-title ul li:nth-child(2),.pay-table-content ul li:nth-child(2){width: 30%;} */
+
+}
+
+@media (max-width: 767px){
+.content.all-services{margin-top: 60px;}
+.banner1 .banner-img img {left: -95%;max-width: none;position: relative;width: 260%;}
+.banner figcaption {bottom: auto;left: 20px;margin-left: 0px;top: 20px;width: auto;}
+.banner1 h1 {width: 50%;}
+.center-content .r-border {width: 24%;}
+.center-content span.center-txt{width: 80%;}
+.assist-links .assist-box {margin-bottom: 30px;border-right:0;}
+.assist-boxv1 div{margin-left: 0;vertical-align: top;}
+btn {font-size: 14px;min-width: 90px;padding: 10px;}
+.assist-box{height:auto;margin-bottom:30px;margin-right:0;}
+.assist-box a{height:auto;text-align:center;}
+.assist-box a img{width:45px;}
+.assist-box a.mleft{text-align:left;}
+.assist-box div{margin-left:40px;text-align:left;width:auto;}
+.assist-box div h4{font-size:18px;margin-top:0;}
+.assist-box div span{font-size:12px;}
+.assist-box div.emailbox{margin-left:0;text-align:center;width:100%;}
+.assist-links{overflow:auto;}
+
+.assist-links .assist-box:last-child{border-right:2px solid #dfdfdf;}
+}
+
+@media (max-width: 480px){
+.banner1 .banner-img img {left: -137%;width: 350%;}
+.banner1 h1 {font-size: 1.8em;}
+.plan-details .panel-heading h4 a{font-size: 18px;padding: 15px 40px 15px 15px;}
+.center-content .r-border {width: 10%;}
+.center-content span.center-txt{width: 80%;}
+.assist-box{display:block;margin-bottom:15px;margin-right:0;width:100%;}
+.assist-links .assist-boxv1{float: none;width:100%;margin-bottom:15px;height: auto;padding: 10px;}
+.assist-box a img{width:45px;}
+.assist-box div h4{font-size:18px;}
+
+.assist-links .assist-box{border-right:2px solid #dfdfdf;}
+.assist-box{height:auto;margin-bottom:30px;margin-right:0;}
+.assist-box a{height:auto;text-align:center;}
+
+.assist-box a.mleft{text-align:left;}
+.assist-box div{margin-left:40px;text-align:left;width:auto;}
+.assist-box div h4{font-size:18px;margin-top:0;}
+.assist-box div span{font-size:14px;}
+.assist-box div.emailbox{margin-left:0;text-align:center;width:100%;}
+.assist-links{overflow:auto;}
+.assist-links .assist-box{border-right:0;}
+.assist-links .assist-box:last-child{border-right:2px solid #dfdfdf;}
+
+}
+
+/* .modal-content .modal-header .close { font-size:22px; margin-top:-12px; } */
+
+
+.all-servicesNew .accordion ul li > a{background-color:#08486f;background-image:url();background-position:97% center;background-position:right 15px center;background-repeat:no-repeat;color:#fff;display:block;font-family:ZurichBT-Bold !important;font-size:20px;line-height:1.4;padding:15px;width:100%;height: 60px;}
+.all-servicesNew .accordion ul li > a .arrow{top:26px;}
+.all-servicesNew .accordion ul li.active > a .arrow{top:25px;}
+
+.all-servicesNew .accordion>ul>li>a:before{display: none;}
+.all-servicesNew .accordion>ul>li>a:after{display: none;}
+
+
+/*----------------------------CSS for All Services Page ENDS here BY Vitesh--------------------------*/
+
+/****CSS Changes for My Policy Page - Dipti ****/
+
+.accordion .action-policy ul.action-list li span {font-size: 14px;line-height: normal;}
+.accordion ul li.active > a .arrow{border-left:6px solid transparent;border-right:6px solid transparent;border-top:0;border-bottom:6px solid #fff;height:0;right:20px;top:18px;width:0;}
+.accordion ul li > a .arrow:after{border:1px solid #fff;border-radius:50px;content:"";height:26px;position:absolute;width:26px;top: -16px;right: -13px;}
+.accordion ul li.active > a .arrow:after{right:-13px;top:-9px;}
+@media (max-width:767px) {
+	.pie-charts,.accrued-section .partsuccess{width: 100%;float: none;}
+}
+/********************************************/
+
+/*----------------------------CSS for Delete Icon --------------------------*/
+.pur-del{background: url(../images/delete.png) no-repeat;background-size: 30px 30px;height: 32px;width: 32px;display: inline-block;vertical-align: middle;border: 0;}
+.pur-del:hover{background: url(../images/delete-hvr.png) no-repeat;background-size: 30px 30px;height: 32px;width: 32px;display: inline-block;vertical-align: middle;border: 0;}
+@media (max-width: 992px)
+{
+.pur-del{background: url(../images/delete.png) center no-repeat 30px 30px;}
+}
+
+/*----------------------------CSS for Delete Icon End Here By Vitesh--------------------------*/
+/*----------------------------CSS for Add Icon --------------------------*/
+.pur-add{background: url(../images/add.png) no-repeat;background-size: 30px 30px;height: 32px;width: 32px;display: inline-block;vertical-align: middle;border: 0;}
+.pur-add:hover{background: url(../images/add.png) no-repeat;background-size: 30px 30px;height: 32px;width: 32px;display: inline-block;vertical-align: middle;border: 0;}
+@media (max-width: 992px)
+{
+.pur-add{background: url(../images/add.png) center no-repeat 30px 30px;}
+}
+
+/*----------------------------CSS for Add Icon End Here By Vitesh--------------------------*/
+
+/*----------------------------CSS for Policy Statment Welcome Kit --------------------------*/
+.imp-info .beneficiary-table-title ul{background: #a41c2b;color:#fff;margin-left:0;border: 1px solid #353434;}
+.imp-info .beneficiary-table-title ul li{background: none;color:#fff;text-align: left;font-size: 14px;}
+.imp-info .beneficiary-table-title ul li:nth-child(odd){width:75%;border-right: 1px solid #6B6868;}
+.imp-info .beneficiary-table-title ul li:nth-child(even){width:25%;}
+.imp-info .beneficiary-table-title ul li:nth-child(3),.imp-info .beneficiary-table-title ul li:nth-child(4){background: #fff;color:#000;}
+@media (max-width: 992px)
+{
+.imp-info .beneficiary-table-title{display: block;}
+}
+@media (max-width: 767px){
+.imp-info .beneficiary-table-title ul li:nth-child(odd){width:70%;}
+.imp-info .beneficiary-table-title ul li:nth-child(even){width:30%;}
+}
+/*----------------------------CSS for Policy Statment Welcome Kit End Here By Vitesh--------------------------*/
+
+
+.item:nth-child(odd) .atp-table-content ul{background-color:#fff;}
+
+.atp-table{margin-bottom:30px;width:100%;}
+.atp-table-content li .dropdwn select{height:28px;width:80px;}
+.atp-table-content li .dropdwn:after{border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #444;right:35%;top:42%;}
+.atp-table-content li .time{font-family:ZurichBT-Bold;}
+.atp-table-content ul{background:#f1f2f2;color:#444;font-family:ZurichBT-Roman;font-size:0;list-style-type:none;padding:0 10px;}
+.atp-table-content ul li{display:inline-block;font-size:16px;padding:10px 0 0 0;text-align:left;text-transform:capitalize;vertical-align:middle;width:25%;height: 100px;}
+.atp-table-content ul li:last-child{width:10%;text-align: right;}
+.atp-table-content ul li:nth-last-child(2){width:15%;text-align: left;}
+.atp-table-content ul li:first-child{width:25%;text-align: left;}
+
+.atp-table-content ul li:last-child .pur-btn{margin-top: 0;position: relative;top:0;}
+.atp-table-title ul{background:#ddd;color:#444;font-family:ZurichBT-Bold;font-size:0;list-style-type:none;margin:0;overflow:hidden;padding:0 10px;width:100%;}
+.atp-table-title ul li{display:inline-block;font-size:16px;padding:15px 0;text-align:left;text-transform:capitalize;vertical-align:middle;width:25%;}
+.atp-table-title ul li:last-child{width:10%;padding: 10px;text-align: right;}
+.atp-table-title ul li:nth-last-child(2){width:15%;padding: 10px;text-align: left;}
+.atp-table-title ul li:first-child{width:25%;padding: 10px;text-align: left;}
+.final-row .atp-table-content ul{background-color:#004b80;color: #fff;font-family:ZurichBT-Bold;}
+.atp-table .owl-carousel{display: inline-block;}
+.atp-table .item{width: 100%;border:0;max-width: 100%;}
+.atp-table .item:hover,.atp-table .item:focus{box-shadow: none;}
+
+	
+	
+.edit{background:url(../images/edit.png) no-repeat;height:40px;width:40px;display: inline-block;vertical-align: middle;}
+
+
+
+.pay-type , .showSaveBtn{display:block;}
+.scroll-pane {height: 80px;}
+.jspScrollable {height: 300px;}
+.nomineedob .toggle-btn-grp{width: 68%;}
+
+.dashboard_servicesPanel.scroll-pane{height:270px !important;}
+
+.green-btn{display:inline-block !important; height:30px !important;}
+
+@media (max-width:490px) {
+.modal-body{max-height: 400px;overflow-y: auto;}
+}
+
+/*----------------------------CSS for page content Here By Dipti--------------------------*/
+.content2 {margin-top: 0px;padding-top: 160px; min-height:370px;}
+@media (max-width: 992px)
+{
+	.content2 {margin-top: 0px;padding-top: 0px; min-height:370px;}
+}
+
+/*----------------------------CSS for Fund Switch mobile view Here By Vitesh--------------------------*/
+@media (max-width:767px) {
+	
+	.fund-switch .beneficiary-table-content ul{padding: 0;border: 1px solid #CCC;margin-bottom: 20px;}
+	.fund-switch .beneficiary-table-content ul li:first-child,.fund-switch .beneficiary-table-content ul li:nth-last-child(2){width: 100%;}
+	.fund-switch .beneficiary-table-content ul li{width: 100%;text-align: left;padding: 15px;}
+	.fund-switch .beneficiary-table-content ul li:last-child{width: 100%;text-align: center;background: #F1F2F2;}
+	
+	.fund-switch .final-row .beneficiary-table-content ul li:first-child{width: 65%;}
+	.fund-switch .final-row .beneficiary-table-content ul li:nth-child(3){width: 35%;}
+	.mobile-view {display: inline-block;}
+	.my-policy-table .checkbox label,.my-policy-table .pay-table-title li:first-child .checkbox label{border: 2px solid #fff !important;}
+}
+
+.policy-content{padding:15px;} /* By vitesh as latest css  v23*/
+
+.no-cursor{cursor: not-allowed;}
+
+/*----------------------------CSS for Servicing Inbox Pagination By Vitesh--------------------------*/
+.servicing-inbox .pagination li a{font-size: 20px;margin-right: 5px;}
+
+.serbox.table>tfoot>tr>td{padding:25px 0 0 0;}
+ 
+
+/* Added for Containers min height by Gajanan */
+.min_height370px { min-height:370px; }
+
+/* Added for OTP modal by vitesh */
+.modal-body{
+	background: #fff;
+}
+
+.info_error{background: url("../../common/images/error.png")no-repeat;width:30px;height:30px;display:inline-block;}
+.info_success{background: url("../../common/images/success.png")no-repeat;width:30px;height:30px;display:inline-block;}
+.info_warn{background: url("../../common/images/warning.png")no-repeat;width:30px;height:30px;display:inline-block;}
+.info_info{background: url("../../common/images/info.png")no-repeat;width:30px;height:30px;display:inline-block;}
+
+/* .errorMsgDiv{vertical-align:top;margin:0;font-size: 16px;font-family:ZurichBT-Bold;} */
+
+.errorMsgDiv{display:inline-block;vertical-align:top;margin: 4px 0px 0px 15px;font-size: 16px;font-family:ZurichBT-Bold;}
+
+#errorMessage-popup .modal-content .modal-footer {border:none !important}
+
+.modal-content .modal-footer .okBtn{
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -webkit-transition: all .25s ease;
+    background-color: #a41c2b;
+    border: 0;
+    color: #fff;
+    display: inline;
+    font-family: ZurichBT-Bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .25s ease;
+    vertical-align: top;
+    zoom: 1;
+    margin-left:10px;
+}
+
+.modal-header{background-color:#eee;}
+
+/* for Social login in myProfile- added by Gajanan */
+.social_anchorTag { float:left; margin-right:5%; }
+
+
+/*----------------------------CSS for My Policy By Vitesh--------------------------*/
+@media (max-width: 992px){
+.table-container {max-height: 180px;}
+}
+.table-container{max-height: 150px;}
+
+
+/*----------------------------CSS for Fund Value By Vitesh--------------------------*/
+/* .valuepoilicysummary .detail li:last-child,.valuepoilicysummary .detail li:nth-child(2){border-bottom:none;} */
+.si .item .pay-table-content a {width:100% !important; }
+
+.alerts .si-table-content ul li p a{width:auto !important;}
+
+.modal-content .modal-footer .cancelBtn {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-transition-duration: .3s;
+    -webkit-transition-property: transform;
+    backface-visibility: hidden;
+    background: #fff;
+    border: 1px solid #333;
+    box-shadow: 0 0 1px rgba(0,0,0,0);
+    color: #333;
+    display: inline-block;
+    font-family: ZurichBT-Bold;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateZ(0);
+    text-decoration: none;
+    transition-property: transform;
+    vertical-align: middle;
+    font-size:16px;
+}
+
+/* Added for Datepicker Label - by Gajanan */
+.inpt-txt .DatePicker_label { z-index: 1; top: -8px; font-size: 14px; }
+
+/* servicing inbox css */
+.service-inbox .dropdwn{width: 60%;background: transparent; z-index: 2;}
+    /* jp list table */
+.rqst-tbl {width: 100%;}
+.rqst-tbl{margin-bottom: 30px;}    
+.rqst-tbl thead{background:#ddd;color:#444;font-family:ZurichBT-Bold;padding: 0 10px;}
+.rqst-tbl thead th{font-size:16px;padding:15px 0;text-transform:capitalize;vertical-align:middle;}
+.rqst-tbl tbody td{font-size:14px;padding:15px 0;text-transform:capitalize;}
+.rqst-tbl tbody tr:nth-child(odd){background-color: #fff;}
+.rqst-tbl tbody tr:nth-child(even){background-color: #f1f2f2;}
+.pagination .page-btn{background:#fff;border:1px solid #dbdbdb;border-radius:0;box-shadow:0 0 0 transparent;color:#004a80;font-family:ZurichBT-Roman;font-size:18px;font-weight:400;height:42px;line-height:40px;margin:0 10px 0 0;padding:0 10px;text-shadow:0 0 0 transparent;width: 42px;}
+.pagination .side-btn{font-family:"Courier New",Courier,monospace;font-size:24px;}
+.pagination .page-btn.active{color:#b02a30;}
+.rqst-tbl>tbody>tr>td, .rqst-tbl>tbody>tr>th, .rqst-tbl>tfoot>tr>td, .rqst-tbl>tfoot>tr>th, .rqst-tbl>thead>tr>td, .rqst-tbl>thead>tr>th{border-top:0;padding:10px 20px;}
+/* Pending Application Search Table End */
+
+/* Added for Disclaimer - by Vitesh */
+.hundred{height: 100px;}
+
+/* Added for E-insure Account Popup - Merlin */
+.blacktext{color:black;}	
+
+/* Added for MyPolicy page(No accrued Bonus) - Gajanan */
+.padding75px { padding:75px 0; }
+/* Added for Smart Search - Vitesh */
+/* .pay_1 .dropdwn{margin-top:0;} */
+.padding75px { padding:75px 0; }
+
+.width68 { width:68%; } /* Added for Smart search - transaction history -- By Gajanan */
+
+/*----------------------------CSS for My Policy By Vitesh--------------------------*/
+
+.my-policy-content .action-list{margin-top:0;}
+.my-policy-content .action-list li{margin-top:0;margin-bottom: 40px;}
+.my-policy-content .action-list-head.action-list li{margin-bottom:0;}
+
+/* Added for Tushit */
+.pay_1 #payCheque .dropdwn,.pay_1 #ecsCheque .dropdwn ,.pay_1 #payBank{ margin-top:30px; }
+
+/* Added for My policy details -- css override */
+.borderbottomnone{border-bottom:none !important;}
+.accor-content #allocation-table tbody tr td:last-child{text-align:right;}
+
+/* Added for Confirmation code(Nishant) -- css override */
+.modal-body .decimalListafter li:first-child:before { position: relative; left:0; }
+
+/********Add CSS for footer ***************/
+/* .footer {margin-top:30px;} */
+
+/****** Added for Smart Search Transaction History (Merlin) *******/
+.mar-20-top{margin-top:20px! important;}
+.text_uppercase{text-transform: uppercase;}
+
+/* Added for Customer Dashboard -- by Gajanan */
+.dashboard_servicesPanel { border:none; }
+.action-links li { width:50%; float:left; border:1px solid #ccc; }
+.action-links li:first-child { border-right:none;}
+.action-links li:nth-child(3) { border-right:none; border-top:none; }
+.action-links li:last-child { border-top:none; border-bottom:1px solid #ccc; }
+.action-links li a img { margin-right:10px; }
+.action-links li a span { font-size: 16px;float: right;width: 73%; height: 58px; }
+@media (max-width:500px) {
+.action-links li a span { width: 70%; }	
+}
+@media (min-width:381px) and (max-width:434px) {
+.action-links li a span { width: 65%; }	
+}
+@media (max-width:380px) {
+.action-links li a img { width:25%; }
+.action-links li a span { width: 65%; height:60px; overflow-y:scroll; }
+}
+@media (min-width:990px) and (max-width:1200px) {
+.action-links li a span { width: 67%; }	
+}
+/* Added for Customer Dashboard -- by Gajanan */
+
+.policy-table ul li:nth-child(2){text-align:left;}
+
+/* Added for tooltip -- Vitesh */
+.hint--info:after { white-space: pre-wrap;text-transform: none; }
+
+.textInherit{text-transform:inherit;}
+
+.fieldsetBox{position: relative;
+    margin: -17px 0px 15px 28px;
+    width: 6%;
+    background-color: #fff;
+    color: #444;
+    font-weight: normal;
+    font-family: 'ZurichBT-Roman';
+    font-size: 14px;
+    padding-left: 2px;}
+
+/* Added for Premium Redirection -- by Gajanan */
+.fund-switch .beneficiary-table-title ul li.premiumTable, .fund-switch .beneficiary-table-content ul li.premiumTable { width:25%; }
+
+/****** Added for Premium Caleder(Merlin) *******/
+.list_style_type_none{list-style-type:none !important;}
+
+.panel-title .padding-left-20 { padding-left: 20px; }
+
+.othersMenuShow { background: #e77817;left: 51.8%;width: 20%; border-bottom:none; }
+.othersMenu:hover .othersMenuShow { display:block; }
+.menuItems {background-color: #e77817;border-bottom: 1px solid white;}
+.othersMenuShow .seconadary-tabs>li>a {background-color: #e77817; color:white;}
+.othersMenuShow .seconadary-tabs>li>a:focus, .othersMenuShow .seconadary-tabs>li>a:hover { background-color: white !important; color:#053c6d !important; font-weight:bold !important;}
+.showDetails { display:none;position: absolute;right: 40px;top: 38px;font-size: 16px;border: 1px solid #bbb;z-index: 9;background: white; padding: 15px;}
+.second-nav .secondary-navigation>li.active { background-color: #e77817; }
+
+.ftmenu {background: url(../images/footer.png) repeat-x #97291e;text-align: center;}
+
+.my-policy-content .action-list li.actionAnchorLi { margin-bottom:5px; }
+.accordion ul li > a.actionHyperlink { background: none; display:inline; font-family: 'ZurichBT-Roman' !important; padding-left:0; font-weight: normal; }
+
+.minHeight_530 { min-height:530px; }
+
+/* Added for Unit Statement -- by Vitesh */
+.untstfndur{margin-bottom: 25px;}
+.untstfndur ul li{font-size: 16px;border: 1px solid #e1e1e1;padding: 10px 0;float:left;width:33%; background: #fff}
+.untstfndur ul li:nth-child(1),.untstfndur ul li:nth-child(2),.untstfndur ul li:nth-child(3){background: #ccc;font-weight: bold;}
+@media (min-width:768px) and (max-width:1024px) {
+.untstfndur ul li:nth-child(1){display: none;}
+.untstfndur ul li{width:50%;}
+}
+@media (max-width:767px) {
+.untstfndur ul li:nth-child(1),.untstfndur ul li:nth-child(2){display: none;}
+.untstfndur ul li{width:100%;padding: 5px 0;}
+.untstfndur{margin-bottom: 25px !important;}
+}
+.absolute{position:absolute;}
+.border-none{border:none !important;}
+/****** Added for Payment Failure Page(Merlin) *******/
+.margin-top-40{margin-top:40px;}
+.text_align_left{text-align:left;}
+.position-fixed{position:fixed;}
+/****** Added for my policy page policy detail:  By Vitesh   *******/
+@media (min-width:1025px) {
+#policyDetail li{vertical-align:top;}
+.policy-detail .detail li{padding: 0 0 10px;width: 28%;}
+.policy-detail .detail li:nth-child(even) {margin-right: 5%;}
+}
+@media (min-width:768px) and (max-width:1024px){
+	.policy-detail .detail li{width: 47%;}
+	.policy-detail .detail li:nth-last-child(2){border-bottom: none;}
+
+}
+.wordwrap { word-wrap:break-word; } /*Dipti*/
+
+.first-header .nav>li.topIcons>a{display:inline-block; width:30px;height:24px; text-align:center; font-size:10px; border:none; color:#97291e; margin-top:-4px; }
+.logout-icon {background: url('../images/logout-icon.png') 0 0 no-repeat;}
+.dashboard-icon {background: url('../images/home-icon.png') 0 0 no-repeat;}
+.first-header .nav>li.topIcons>a.hint:after, .first-header .nav>li.topIcons>a:after{width:auto;}
+.first-header .nav>li.topIcons>a.hint:after, .first-header .nav>li.topIcons>a.hint--bottom:before, .first-header .nav>li.topIcons>a.hint:after, .first-header .nav>li.topIcons>a.hint--bottom:after{left:25%;}
+
+@media (max-width:992px) {
+	.search,.login-tab,.logout-tab{background-image:url('../images/search-maroon.png');background-position:top center;background-repeat:no-repeat;color:#97291e;display:block;font-family:ZurichBT-Roman;font-size:12px;height:45px;line-height:67px;text-align:center;text-transform:capitalize;width:45px;}
+	.logout-tab {background-image: url('../images/tab-logout.png');}
+	.search-icon,.login-icon,.logout-icon{border-right:1px solid #dedede;float:right;padding-right:15px;position:relative;right:65px;top:10px;}
+	.login-icon,.logout-icon {border-right: 0;position: absolute;right: 0; top:0;}
+	.search:hover,.search:focus,.login-tab:hover,.login-tab:focus,.logout-tab:hover,.logout-tab:focus{color:#97291e;}
+}
+.top-head{padding:8px 0;}
+
+/****** Added for Customer Name for tablet & Mobile -- Gajanan *******/
+.customerName_Mobile .welcome-msg{margin-right:15px;padding-top:0px;} /*Dipti*/
+.customerName_Mobile .welcome-msg-arrow{margin-right:15px;}
+@media (max-width:775px) {
+.customerName_Mobile { font-size:80%;margin-top: 15px;width: 100%;text-align: left;float: none;}
+.customerName_Mobile .navbar-nav{margin:0;}
+.customerName_Mobile .welcome-msg { float:left !important; width:85%; margin-right:0;}
+.customerName_Mobile .welcome-msg-arrow{float:right !important; width: 8%; text-align:center;}
+.showDetails { width: 90%; top:85px !important; right:auto !important;}
+}
+@media (max-width:600px) {
+.pur-table-content ul{max-height:100%;}
+}
+@media (max-width: 775px){
+.navbar-nav, .navbar-nav>li {float: none!important;}
+.navMenuDiv, .navbar-header {float:left!important;}
+}
+@media (min-width:776px) and(max-width: 1025px){
+.customerName_Mobile{width:50%;}
+.customerName_Mobile ul{width:83%; float:right !important;}
+.customerName_Mobile .welcome-msg {float: left!important; width:60%;}
+.customerName_Mobile .welcome-msg-arrow{float: left!important; width:8%;}
+.customerName_Mobile ul li.logoutDiv{float:right !important;}
+}
+@media (max-width: 992px){
+.login-tab {
+    background-image: url('../images/tab-login.png');
+}}
+@media (max-width: 992px){
+.first-header li.login-dropdown.logoutDiv {
+    display: none;
+}}
+
+/****** Added for Unclaimed Amount Page(Merlin) *******/
+.app-track{background:#8D161B url(../images/tab-bghover.jpg) repeat scroll left center;color:#fff;display:block;font-family:ZurichBT-Italic,Cambria,"Hoefler Text","Liberation Serif",Times,"Times New Roman",serif!important;font-size:18px;font-weight:700;height:43px;line-height:41px;margin-top:10px;padding-left:25px;position:relative;text-align:left;text-decoration:none;width:100%;}
+.border-bottom-orange{border-bottom: 1px solid #e77817;}
+
+/****** Added for Landing Dashboard No Data Page(Merlin) *******/
+.light-orange{background-color: rgba(231, 120, 23, 0.18);}
+
+/****** Added for My Policy Page(Merlin) *******/
+.text-align-right { text-align: right; }
+
+/****** Added for ATP/ATS Page(Merlin) *******/
+.icon-cancel {background: url(../images/delete.png) no-repeat;background-size: 30px 30px;height: 32px;width: 32px;display: inline-block;vertical-align: middle;border: 0;}
+.icon-cancel:hover {background: url(../images/delete.png) no-repeat;background-size: 30px 30px;height: 32px;width: 32px;display: inline-block;vertical-align: middle;border: 0;}
+@media (max-width: 991px){
+	.atp_atstable{width: 100% ! important;display:inline;}
+	.atp_ats_table{width:50% ! important;display:inline;}
+	.atp_ats_center_content{text-align:center ! important;}
+}
+.width_130{width:130px ! important;}
+.disable{cursor: not-allowed;opacity: 0.4;}
+
+
+/****** Added for Premium Redirection Page *******/
+.invst{width: 30% !important;}
+.font-bold{font-family:ZurichBT-Bold !important;}
+.font-size-12{font-size:12px !important;}
+
+/****** Added for CSR Dashboard Page(Merlin) *******/
+.viewmrelink{display:block !important;}
+
+/****** Added for showPolicyErrorMessage in ATP/ATS Main Page(Merlin) *******/
+@media (max-width: 768px){
+	.atpatsmain_error{margin-top:25px;padding-left:20px;}
+}
+
+/****** Added for Checkbox -- Vitesh *******/
+.my-policy-table .checkbox label,.my-policy-table .pay-table-title li:first-child .checkbox label{border: 2px solid #E77817;height: 25px;width: 25px;}
+.my-policy-table .checkbox label:before{height: 8px;width: 16px;top: 4px;}
+
+.tasks-list-mark{border: 2px solid #E77817;width: 25px;height: 25px;}
+.tasks-list-cb:checked ~ .tasks-list-mark {border-color: #E77817!important;}
+.invalid1{border: 2px solid #EF1005!important;}
+.tasks-list-mark:before{height: 8px;top: 45%;width: 16px;left: 45%;margin: -5px 0 0 -6px;}
+/* Added for DatePicker -- Gajanan */ 
+.day .select2-container--default .select2-selection--single { border-right:none; }
+.month .select2-container--default .select2-selection--single { border-left:none; border-right:none; }
+.year .select2-container--default .select2-selection--single { border-left:none; }
+.inpt-txt .DatePicker_label { z-index: 1; top: -8px; font-size: 14px; }
+.info-msg{color: #F38540 !important;font-family: ZurichBT-Bold;font-size: 14px;}
+
+/* Added for BlockUI Loader -- Gajanan */
+.blockPage { z-index:999999 !important;top: 48% !important;width:100px !important;height: 100px;left: 45% !important;border-radius: 10px; }
+.blockPage img{ margin-top:25px; }
+@media (max-width:374px) {
+.blockPage {left:35% !important;}
+}
+@media (min-width:375px) and (max-width:411px) {
+.blockPage {left:39% !important;}
+}
+.blockOverlay { z-index:999999 !important; }
+
+/* Added for BlockUI Loader -- Gajanan */
+
+/****** Added for Servicing Inbox (Merlin) *******/
+.margin_top_minus_50{margin-top:-50px;}
+
+.serinbox ul{width:75%}
+.serinbox ul li{border-bottom: 1px solid #999 !important;margin: 0;width:50%;}
+.serinbox ul li.active{border-bottom: 2px solid #e77817 !important;}
+.serinbox ul li a{color: #444;font-weight: bold;font-size: 18px;text-transform: capitalize;}
+
+@media only screen and (min-width: 768px){
+.serinbox ul.resp-tabs-list {display: block;}
+}
+
+
+@media (max-width: 767px){
+.serinbox .rqst-tbl {width: 100%;}
+}
+
+/****** Added for Servicing Inbox (Merlin) *******/
+@media (max-width: 767px){
+#openclosedLogDiv {display: block;}
+}
+
+/**********CSS for Input Focus **************/
+.form-control:focus {border-color: #66afe9 !important;outline: 0; box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6) !important;}
+
+.top-head .first-header li.welcome-msg-arrow{margin-top:0px;} /*Dipti*/
+
+/****** Added for All Services: vitesh *******/
+@media (max-width: 1024px){
+.btn-holder a:first-child{font-size: 14px;}
+
+.invest-view .border-title.mobile-top-30 {margin-top: 30px;}
+}
+@media (max-width: 768px){
+ .alerts {border: 1px solid #ccc;}
+}
+#commonPayPremium .inpt-txt input,#commonPayPremium .dropdwn select{width: 100%;}
+
+#commonPayPremium .splitpay{width: 70% !important;}
+
+@media (max-width: 992px){
+.split-link{margin-top: 0;}
+}
+@media (max-width: 767px){
+ .split-link .hint-info {z-index: 111;line-height: 16px;}
+ #commonPayPremium .splitpay{width: 60% !important;}
+}
+.min-height94{min-height:94px;}
+
+#alert-list { height:176px; }
+.err-pswd{color:#EF1005;font-family:ZurichBT-Roman;font-size:13px;margin-top:5px;}
+
+/****** Added for Smart Search (Merlin) *******/
+@media (max-width:992px) {
+.mob-wid-full{width:100%;}
+}
+
+@media (min-width:600px) and (max-width:769px) {
+.navbar-toggle{top:5px;}
+}
+
+/****** Added for Smart Search Page(Merlin) *******/
+.padleft_20{padding-left: 20px ! important;}
+
+/****** Added for ATP/ATS Page(Merlin) *******/
+.display_block { display:block !important; }
+@media (max-width:600px) {
+	.atp_ats_span{width:50% ! important; float:right;}
+}
+
+/****** Added for Fund Switch Page(Merlin) *******/
+@media(max-width: 375px){
+	.fund_switch_span{float:right; width:64% ! important;}
+}
+@media(max-width: 992px){
+.fund_switch_span{float:right; width:49%;}
+.fund_switch_center{text-align:center ! important;}
+}
+.success-pswd{color:green;font-family:ZurichBT-Roman;font-size:13px;margin-top:5px;}
+
+/****** Added for Payment Failure Page(Merlin) *******/
+.height_50{height:50px;}
+
+.lowerCase{text-transform: lowercase !important;}
+
+/****** Added for My Dashboard Page(Merlin) *******/
+@media (max-width:485px){
+.iwantosectn li{border-right: 1px solid #ccc ! important;vertical-align: middle;width: 100%;}
+.iwantosectn li a{height: 70px;}
+.iwantosectn li a img{width: 16%;}
+.iwantosectn_span{margin-top: 15px;width:79% ! important; height: 58px ! important;}
+}
+
+ @media (min-width: 768px){
+	.mob-mar-top-25{margin-top: 25px ! important;}
+}
+
+/****** Added for Bonus Tracker Page(Merlin) *******/
+.bonus_table{ border: 1px solid black; border-collapse: collapse;}
+.bonus_table_border{ border: 1px solid black ! important;}
+
+.left_minus_33{left:-33px;}
+.bonus_toglebutton{float: left; left: 47px; margin-top: -4px; display: block !important; visibility: visible !important; color: black;}
+.black_background{background-color: black;}
+
+.bonus_li{border-bottom: 1px solid #fff; padding: 0; height:34px; display: block; position: static;}
+.bonus_li a{color:#fff; padding: 10px 20px; padding-top:0px; padding-bottom:0px; background-image: url(images/nav-arrow-mobile-copy.png); background-position: 100% center; background-repeat: no-repeat; border-left: 0; position: relative; display: block; }
+.bonus_div{position: absolute; right: 70px; top: 53px; font-size: 16px; border: 1px solid #bbb; z-index: 9; background: #a41c2b; /* padding-left: 15px; padding-right:15px; */}
+.bonus_div .bonus_li>a{    background-image: url(images/nav-arrow-mobile-copy.png);
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    border-left: 0;
+    position: relative;
+    display: block;}
+
+@media (max-width:330px) {
+	.bonus_login_icon{width:16%;}
+	.bonus_toglebutton_mobile{left:21px ! important;}
+	.bonus_home_a{width: 26px; margin-top: -7px; left:-62px;}
+	 .bar1{width:28px ! important;}
+}
+@media (min-width:331px) and (max-width:360px) {
+	 .bonus_toglebutton_mobile{left:21px ! important;} 
+	.bonus_home_a{left:-75px ! important;}
+}
+@media (min-width:361px) and (max-width:485px) {
+		.bonus_home_a{left:-87px ! important;}
+		.bonus_toglebutton_mobile{left:45px ! important;}
+}
+@media (min-width:486px) and (max-width:600px) {
+	.bonus_home_a{left:-99px ! important; margin-top:2px ! important;}
+	.bonus_toglebutton_mobile{left:171px;}
+}
+@media (min-width:601px) and (max-width:768px) {
+	.bonus_toglebutton_mobile{left:320px;}
+	.bonus_home_a{left:-105px ! important; margin-top:2px ! important;}
+	
+}
+
+.bonus_home_div{display: inline-block; float: right; font-family: ZurichBT-Roman; font-size: 1rem; margin-top: 7px;}
+ .bonus_home_ul{float: right!important; margin-right: 0;}
+ .bonus_home_li{padding: 3px 0 10px; float: left; position: relative; display: block;}
+ .bonus_home_a{display: inline-block;  width: 30px; height: 24px; text-align: center; font-size: 10px; border: none; color: #97291e; margin-top: -4px;}
+
+/************ Added For My Annuity Page ***************/
+.annuity_table{ border: 1px solid black; border-collapse: collapse;}
+.annuity_table_border{ border: 1px solid black ! important;}
+@media (max-width:767px) {
+#annuity_strt_end_date{padding:0;padding-left:0!important;padding-right:0!important;}
+}
+.border_right_none{border-right: none ! important;}
+.border_left_none{border-left: none ! important;}
+
+/************ Added For Postponement Page (Merlin) ***************/
+@media (min-width:767px) {
+.switch-policies .postpon-tbl-cntnt ul li:nth-child(2), .switch-policies .postpon-tbl-title ul li:nth-child(2){width:16%;}
+.switch-policies .postpon-tbl-cntnt ul li:nth-child(3), .switch-policies .postpon-tbl-title ul li:nth-child(3){width:27%;}
+.switch-policies .postpon-tbl-cntnt ul li:nth-last-child(2), .switch-policies .postpon-tbl-title ul li:nth-last-child(2){text-align: center;}
+}
+
+/************ Added For Annuity Registration Page (Merlin) ***************/
+.inline_block_display {display: inline-block ! important;}
+.margin_top_none{margin-top:0px;}
+.border_top_none{border-top: none ! important;}
+
+@media (max-width:600px) {
+ .bonus_table_head1{display: none;}
+ }
+   @media (max-width: 768px){
+	.mob-mar-top-65{margin-top: 65px ! important;}
+}
+ .bonus_table>tbody>tr>td, .bonus_table>tbody>tr>th, .bonus_table>tfoot>tr>td, .bonus_table>tfoot>tr>th, .bonus_table>thead>tr>td, .bonus_table>thead>tr>th{padding:8px ! important;}
+ 
+ /****** Added for PSCommision Report Page(Merlin) *******/
+ .width_33{width:33% ! important;}
+.left_text_align{text-align:left ! important;}
+.pscommisionreport_li{padding-top:15px ! important; padding-bottom: 15px ! important;}
+ @media(max-width: 770px){
+ .beneficiary-table-content ul li.pscommisionreport_li:nth-last-child(2){width:33% ! important;}
+ }
+ @media (max-width: 767px){
+.beneficiary-table-content ul li.pscommisionreport_li:last-child {background: #f1f2f2;}
+ }
+  @media (max-width: 768px){
+.mob_margin_top_0{margin-top:0px ! important;}
+ }
+ .list_style_disc{list-style-type:disc;}
+ @media (max-width: 767px){
+.mob_margin_top_15 {margin-top:15px;}
+ }
+   .font_size_14_imp{font-size:14px ! important;}
+@media (max-width: 768px){
+   .mob-mar-top-120{margin-top: 120px ! important;}
+}
+
+/************ Added For Payment Page  (Merlin) ***************/
+@media (max-width:992px) {
+	.mobile_mar_top_100{margin-top:100px;}
+}
+.border_right_none{border-right: none ! important;}
+.border_left_none{border-left: none ! important;}
+.paydatediv{width:68%;}
+@media (max-width:992px) {
+	.paydatediv{width:100%;}
+}
+.remarksdiv{width:68%;}
+@media (max-width:992px) {
+	.remarksdiv{width:100%;}
+}
+
+/************ Added For Profile Details  (Merlin) ***************/
+@media (min-width:769px) {
+.psprofilee.panel-body{display:block;}
+}
+.list_style_type_disc{list-style-type:disc;}
+
+/************ Added For Rider Details Page  (Merlin) ***************/
+@media (min-width:993px) {
+.width_23{width:23% ! important;}
+.width_8{width:8% ! important;}
+}
+@media(max-width: 992px){
+.min_height_276{min-height:267px ! important;}
+}
+
+/************ Added For NPS Page  (Merlin) ***************/
+
+.mainchkfootabl_label_title{border: 2px solid #c4cbd2; height: 20px; min-height: auto;padding: 0;width: 20px;position: relative;display: inline-block;border-color: #444;}
+.mainchkfootabl_label{border: 2px solid #c4cbd2; height: 20px; min-height: auto;padding: 0;width: 20px;position: relative;display: inline-block;}
+.mainchkfootabl_titl{border-color: #444;}
+.mainchkfootabl{display: none;left: 10px;margin: 0;top: 4px;}
+.footcheck{width: 100%;float: left;margin: 0;padding: 0;}
+.footcheck .mainchkfootabl_label.active:before{display: block;}
+.footcheck .mainchkfootabl_label:before{border: solid #053c6d;border-width: 0 0 4px 4px;content: '';display: none;height: 6px;left: 3px;position: absolute;top: 3px;transform: rotate(-45deg);width: 12px;}
+
+/* .nav li a.subTabs{margin-left:40px;}
+.nav li a.tabTitle{padding-left:50px;}
+.nav li span.tabHead{padding-left:50px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    color: #e77817;
+    font-family: ZurichBT-Bold;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0 15px 50px;
+    text-transform: capitalize;
+    border:none;
+    display:block;
+    font-weight: bold;
+}
+.tabTitle{border-bottom:2px solid #ccc; width:30%;} */
+.cursor_pointer { cursor:pointer; }
+.res-tabs .nav-tabs > li > span.payin{background-image:url(../images/payin2.png);}
+.res-tabs .nav-tabs > li.active > span.payin{background-image:url(../images/payin2-hover.png);}
+.res-tabs .nav-tabs > li > a.payout{background-image:url(../images/payout.png);}
+.res-tabs .nav-tabs > li.active > a.payout{background-image:url(../images/payout-hover.png);}
+
+.box-highlighter{background-color:#97291e; color:#fff; margin:0; padding:10px;}
+.box-highlighter .box-left{width:20%; float:left;padding:8px 0;}
+.box-highlighter .box-right{width:80%; float:right;}
+.doc-upload-box{border:1px solid #ccc; margin-bottom:10px; padding:10px; height:350px; text-align:center; overflow:hidden; vertical-align:middle;line-height:330px;}
+.doc-upload-box img{vertical-align:middle; max-height:100%;}
+
+input[type=checkbox].ace.ace-switch.approval+.lbl::before{content:"Approve\a0\a0\a0Reject"; width:90px; text-indent:-60px;}
+.active > input[type=checkbox].ace.ace-switch.approval+.lbl::before{text-indent:0px;}
+input[type=checkbox].ace.ace-switch.ace-switch-3.approval:checked+.lbl::after{left:61px;}
+
+.datepicker_div .inpt-txt{margin:0 !important;}
+
+.table>thead.caption>tr>th{background-color:#ddd;}
+
+.discrepancyVerify .container{width:100%;}
+.viewMore{float:right;margin-top:-10px; clear:both; margin-bottom:-8px;}
+.viewMore a{color:#fff; font-size:12px;}
+.rqst-tbl>tbody> .grey_hover:hover{color:#A9A9A9;}
+
+@media (min-width:768px) {
+	#action-list-head-dropdown{display:none;}
+	.action-list-head{display:block;}	
+}
+@media (max-width:767px) {
+	#action-list-head-dropdown{display:block;float:none;}
+	.action-list-head{display:none;}
+	.action-list-container{border: 2px solid #97291e;margin-top: -2px;border-top: 0;}	
+}
+
+/************ Added For HR Data Page  (Swilton) ***************/
+
+.trustee_table_wrapper { overflow-x:scroll; white-space:nowrap; }
+.trustee_table_ul { overflow:inherit !important; }
+.trustee_table_ul-li { width:230px !important; background:#ddd !important; }
+.trustee_table_last-li { width:150px !important; background:#ddd !important; }
+.trustee-table-content-li { width:230px !important; background:#f1f2f1 !important; border-bottom: 1px solid #666; }
+.trustee-table-content-liLast { width:100px !important; background:#f1f2f1 !important; border-bottom: 1px solid #666; }
+
+ul.work_exp_ul li:nth-child(6) { width:260px !important; }
+ul.work_exp_ul li:nth-child(7) { width:150px !important; }
+ul.education_ul li:nth-child(5) { width:250px !important; }
+ul.education_ul li:nth-child(6) { width:160px !important; }
+ 
+.removeAction {padding: 22px 0;}
+.border_none { border:none !important; }
+.padding-bottom-5px {padding-bottom: 5px! important;}
+
+.verify-check {position:relative; margin-top: 4px;}
+.verify-check span, .verify-check-second span{position:absolute; top: 1px; left: 16px; font-size: 12px;}
+.verify-check-second {position:relative; margin-top: 29px}
+.verify-check input[type="radio"], .verify-check-second input[type="radio"] {opacity:1 !important}
+
+.verify-err-msg {float:right;position}
+.address-txt {margin-bottom:15px}
+
+@media (min-width:993px){.trustee-table-content ul li{overflow:hidden; height:80px;}}
+@media (max-width: 992px){.mwpa-item ul li {width: 100%! important;display: flex;  overflow-x: hidden;}.deletebox .mwpa-item ul li{   overflow-x: visible;}}
+@media (max-width: 770px){.mwpa-item ul li, .beneficiary-table-content.nominee ul li:nth-child(4) {height:auto;padding: 1% 5%;}.trustee-table-content ul li:nth-child(6), .trustee-table-content ul li:nth-child(7) {width: 100% !important;}.trustee-table-content-liLast {background:white !important;}.trustee-table-content-liLast .removeAction { padding-top:5px; margin-top:0;}}
+
+
+/************ Added for scb-need-analysis (Swilton) ***************/
+
+.top-head-analysis {padding:0px}
+.analyze-need-section, .financial-affordability {display:none;}
+.scb-analysis-content {font-size: 17px;font-weight: bold;}
+@media (min-width: 770px){.scb-analysis-content{position: absolute;top: 9px;}}
+.scb-analysis-pasa {width:100%; margin-top: 20px; background: #97291e;}
+.scb-analysis-checkbox {width: 20px!important;height: 20px!important;}
+.scb-analysis-checkbox:before {height: 6px;top: 50%;width: 12px;left: 50%;}
+.scb-analysis-box {overflow:auto;}
+.pure-protection-table>thead>tr>th {vertical-align:middle;}
+.invest-protection-table input {width:110px;}
+.invest-protection-table>thead>tr>th{padding:8px; vertical-align:middle;}
+.invest-protection-table>thead>tr>th:first-child {width: 206px;}
+.financial-content {font-size: 17px;}
+.btn-financial-afford-reset, .btn-analyze-need-reset, .btn-cust-decl-reset{height:46px}
+.margin-left-80 {margin-left:80px}
+@media (min-width: 770px){.cust-acknw{position: absolute;top: 10px;}}
+@media (max-width: 992px) {.scb-analy-navbar-header{float: none !important;}}
+@media (max-width: 992px) {.scb-analy-navbar-toggle{top:10px;}}
+@media (max-width: 420px) {.scb-analy-search-icon{padding-right: 10px!important;right: 40px !important;}}
+@media (max-width: 420px) {.scb-analy-login-icon{padding-right: 10px;}}
+@media (max-width: 992px) {.scb-analy-login-icon{top: 10px;}}
+@media (max-width: 420px) {.scb-analy-search, .scb-analy-login {width:40px;}}
+@media (min-width: 770px) {.cust-acknw{position: absolute;top: 10px;}}
+@media (min-width: 770px) {.analyze-need-reset,.financial-afford-reset,.cust-decl-reset{float:right; width:49%; text-align:right;margin-right:10px;padding-right:0px}}
+@media (max-width: 992px) {.scb-analysis-second-nav .scb-analysis-secondary-navigation > li > a {padding: 10px 20px !important;text-transform: uppercase !important;}}
+.scb-analysis-second-nav .scb-analysis-secondary-navigation>li.active {background-color: #97291e;}
+.scb-analysis-input {height:30px !important}
+@media (max-width: 770px){.scb-analysis-input{width:100px !important;}}
+.invest-protection-table>tbody>tr>td{padding: 8px;}
+@media (min-width: 992px) {.yes-td{width:100px;}}
