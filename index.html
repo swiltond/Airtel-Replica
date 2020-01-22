@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>ICICI Prudential Life Insurance</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="css/easy-responsive-tabs.css">
+    <link rel="stylesheet" type="text/css" href="css/PurchaseFlowFinal.css">
+    <link rel="stylesheet" type="text/css" href="css/PurchaseFlowMediaQueryFinal.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-tcs.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-glyphicons.css" />
+    <link rel="stylesheet" type="text/css" href="css/overlay-spinner.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/datedropper.css" />
+    <link rel="stylesheet" type="text/css" href="css/my-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/web-fonts-with-css/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <!--[if lte IE 7]>
+    <style>
+    .content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+    ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+    </style>
+    <![endif]-->
+
+    <script type="text/javascript" src="js/vendors/jquery-1.11.3.min.js"></script>
+    <script src="js/vendors/jquery-ui.min.js"></script>
+    <script src="js/vendors/owl.carousel1.js"></script>
+
+    <!--<script type="text/javascript" src="js/vendors/angular.min.js"></script>-->
+    <script type="text/javascript" src="js/vendors/angular.js"></script>
+    <script type="text/javascript" src="js/vendors/angular-animate.js"></script>
+    <!--<script type="text/javascript" src="js/vendors/angular-route.min.js"></script>-->
+    <script type="text/javascript" src="js/vendors/angular-route.js"></script>
+    <script type="text/javascript" src="js/vendors/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="js/vendors/angular-ui.min.js"></script>
+    <script type="text/javascript" src="js/vendors/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/vendors/angular-jscrollpane.min.js"></script>    
+    <script type="text/javascript" src="js/vendors/sortable.js"></script>
+    <script src="js/vendors/datedropper.js"></script>
+	<script src="js/vendors/moment-with-locales.js"></script>
+	<script src="js/vendors/angular-moment-picker.min.js"></script>
+	<link href="css/angular-moment-picker.min.css" rel="stylesheet">    
+    <script src="js/resources/main.js"></script>
+    <script src="js/resources/directives.js"></script>
+    <script src="js/resources/controllers/policyDetailsController.js"></script>
+    <script src="js/resources/controllers/profileController.js"></script>
+    
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container" ng-controller="myCtrl as Ctrl">
+
+        <!-- Loader Start -->
+        <div class="loader" ng-if="Ctrl.loaderShw">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- <img src="images/SVG-Loaders-master/svg-loaders/oval.svg"> -->
+                        <div class="fas fa-spinner fa-spin loader-spinner"></div>
+                        <h2 class="loader-heading">
+    						<span class="color-maroon">Loading...</span><br>
+    						Please Wait.
+    					</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Loader End -->
+
+        <!-- Sidebar Start -->
+        <aside class="sidebar1" ng-class="Ctrl.navsidebar">
+            <div class="mobile-nav-logo">
+                <div class="mobile-nav-bar" ng-click="Ctrl.toggleNav()">☰</div>
+                <div class="logo"><img src="images/logo.png" alt="ICICI Prudential" class="img-responsive" /></div>
+            </div>
+            <ul class="nav">
+                <li ng-click="selected=1" ng-class="{'active' : selected==1 }"><a href="#/">Dashboard</a></li>
+                <li>
+                    <a class="policies-txt" ng-click="Ctrl.expandPolicies(); selected=2" ng-class="{'active' : selected==2 }">Policies</a>
+                    <img src="images/down-arrow2.png" class="policies-expand" ng-click="Ctrl.expandPolicies()">
+                    <ul class="subMenu" ng-if="Ctrl.subMenuShw">
+                        <li ng-class="{active: Ctrl.policy1}">
+                        	<a href="javascript:void(0);" ng-click="Ctrl.expandProtection()">
+                        		<img src="images/fly-protect.png">
+                        		<span class="plans-name">Protection</span><span class="protection-count">4</span>
+                        		<img src="images/down-arrow2.png" class="protection-expand">
+                        	</a>
+                        	<ul class="protectionSubMenu" ng-if="Ctrl.protectionSubMenuShw">
+                        		<li><a href="javascript:void(0);"><span class="protection-policy-name">Protection Policy 1</span></a></li>
+                        		<li><a href="javascript:void(0);"><span class="protection-policy-name">Protection Policy 2</span></a></li>
+                        		<li><a href="javascript:void(0);"><span class="protection-policy-name">Protection Policy 3</span></a></li>
+                        	</ul>
+                        </li>
+                        <li ng-class="{active: Ctrl.policy2}"><a href="#/policies" ng-click="Ctrl.getPolicy(18730138)"><img src="images/wealth-creation.png"><span class="plans-name">Wealth</span></a></li>
+                        <li ng-class="{active: Ctrl.policy3}"><a href="#/policies" ng-click="Ctrl.getPolicy(19371716)"><img src="images/top-up-icon.png"><span class="plans-name">Savings</span></a></li>
+                        <li ng-class="{active: Ctrl.policy4}"><a href="#/policies" ng-click="Ctrl.getPolicy(19369282)"><span class="fas fa-heartbeat health-icon"></span><span  class="plans-name">Health</span></a></li>
+                        <li ng-class="{active: Ctrl.policy5}"><a href="#/policies" ng-click="Ctrl.getPolicy(19038156)"><img src="images/retirement.png"><span class="plans-name">Retirement</span></a></li>
+                        <li ng-class="{active: Ctrl.policy5}"><a href="#/policies" ng-click="Ctrl.getPolicy(19038156)"><img src="images/child.png"><span class="plans-name">Child</span></a></li>
+                        <li><a href="#/policies"><span class="more-policies-option">View More Policies</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="services-txt" ng-click="Ctrl.expandServices(); selected=3" ng-class="{'active' : selected==3 }">Services</a>
+                    <img src="images/down-arrow2.png" ng-click="Ctrl.expandServices()">
+                    <ul class="subMenu" ng-if="Ctrl.servicesSubMenuShw" id="services-menu-sortable" ui-sortable ng-model="Ctrl.services">
+                        <li><a href="#/"><img src="images/logAcall.png" class="services-img"><span class="services-name">Log a Call</span></a></li>
+                        <li><a href="#/"><img src="images/premium-certificate.png" class="services-img"><span class="services-name">Premium Paid Certificate</span></a></li>
+                        <li><a href="#/"><img src="images/contact-details.png" class="services-img"><span class="services-name">Personal and Contact Details</span></a></li>
+                        <li><a href="#/"><img src="images/nominee-details.png" class="services-img"><span class="services-name">Update Nominee Details</span></a></li>
+                        <li><a href="#/"><img src="images/pay-premium.png" class="services-img"><span class="services-name">Change in Portfolio Strategy(CIPS)</span></a></li>
+                        <li><a href="#/"><img src="images/fund-value.png" class="services-img"><span class="services-name">Fund Value</span></a></li>
+                        <li><a href="#/"><img src="images/switch.png" class="services-img"><span class="services-name">Switch</span></a></li>
+                        <li><a href="#/"><img src="images/unit-statement.png" class="services-img"><span class="services-name">Statements</span></a></li>
+                        <li><a href="#/"><img src="images/pay-premium.png" class="services-img"><span class="services-name">Pay Premium</span></a></li>
+                        <li><a href="#/"><img src="images/annuity-details.png" class="services-img"><span class="services-name">Annuity Details</span></a></li>
+                        <li><a href="#/"><img src="images/reinstate-policy.png" class="services-img"><span class="services-name">Automatic Transfer Plan/Strategy</span></a></li>
+                        <li><a href="#/"><img src="images/top-up-icon.png" class="services-img"><span class="services-name">Top-Up</span></a></li>
+                        <li><a href="#/"><img src="images/top-up-icon.png" class="services-img"><span class="services-name">Premium Redirection</span></a></li>
+                        <li><a href="#/"><img src="images/annuity-details.png" class="services-img"><span class="services-name">Annuity Registration</span></a></li>
+                        <li><a href="#/"><img src="images/annuity-details.png" class="services-img"><span class="services-name">Annuity Postponement</span></a></li>
+                        <li><a href="#/"><img src="images/unclaimed-amount.png" class="services-img"><span class="services-name">Unclaimed Amount</span></a></li>
+                        <li><a href="#/"><img src="images/trans-history.png" class="services-img"><span class="services-name">Servicing Inbox</span></a></li>
+                    </ul>
+                </li>
+                <li ng-click="selected=4" ng-class="{'active' : selected==4 }"><a href="#/myProfile">My Profile</a></li>
+                <li ng-click="selected=5" ng-class="{'active' : selected==5 }"><a href="#/">Logout</a></li>
+            </ul>
+        </aside>
+        <!-- Sidebar End -->
+
+        <!-- Content Start -->
+        <div class="content" ng-class="Ctrl.navcontent">
+            <header ng-class="Ctrl.headerClass">
+                <div class="row headerSmall">
+                    <div class="col-xs-12 col-lg-8">
+                        <div class="profile-img-section">
+                        	<img src="images/neerajSethiImage.jpg" class="img-profile" ng-class="Ctrl.imgProfileClass">
+                        </div>                    
+                        <div class="headerWelcomeDiv" ng-click="Ctrl.expandUserOpts()" ng-class="Ctrl.headerWelcomeDivClass">
+                        	<!-- <span class="far fa-user optionShow"></span> -->
+                        	<span class="hidden-xs optionShow">Hi, Neeraj Sethi</span>
+                        	<img src="images/down-arrow2.png" class="headerWelcomeArrowDown optionShow">
+                        	<ul class="userOptions" ng-if="Ctrl.userOptionsShow" ng-class="Ctrl.userOptionsClass">
+                            	<li><a href="#/myProfile">My Profile</a></li>
+                            	<li><a href="">Logout</a></li>
+                        	</ul>
+                        </div>
+                        <div class="social-networking">
+                        	<a href="" class="fab fa-facebook-f" ng-class="Ctrl.fbIconClass" ng-click="Ctrl.socialNetworkSelect('facebook')"></a>
+                        	<a href="" class="fab fa-twitter" ng-class="Ctrl.twitterIconClass" ng-click="Ctrl.socialNetworkSelect('twitter')"></a>
+                        	<a href="" class="fab fa-google-plus-g" ng-class="Ctrl.googlePlusIconClass" ng-click="Ctrl.socialNetworkSelect('googlePlus')"></a>
+                        	<a href="" class="fab fa-instagram" ng-class="Ctrl.instagramIconClass" ng-click="Ctrl.socialNetworkSelect('instagram')"></a>
+                        	<a href="" class="fab fa-youtube" ng-class="Ctrl.youtubeIconClass" ng-click="Ctrl.socialNetworkSelect('youtube')"></a>
+                        	<a href="" class="fab fa-yahoo" ng-class="Ctrl.yahooIconClass" ng-click="Ctrl.socialNetworkSelect('yahoo')"></a>                        
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+                        <div class="searchBar" ng-if="Ctrl.searchBarShow" ng-class="Ctrl.searchBarClass">
+                        	<span class="alertIcon far fa-bell" ng-click="Ctrl.goToAlerts()">
+                        		<span class="alertIconNumber">2</span>
+                        	</span>
+                        	<a href="javascript:void(0);" class="searchIcon" ng-click="Ctrl.searchClick()">
+                        		<span class="fas fa-search"></span>
+                        	</a>
+                        </div>
+                        <div class="searchText" ng-if="Ctrl.searchTextShow" ng-class="Ctrl.searchBarClass">
+                        	<span class="alertIcon far fa-bell" ng-click="Ctrl.goToAlerts()">
+                        		<span class="alertIconNumber">2</span>
+                        	</span>
+                            <input type="search" class="margin-right-20" style="height:27px" />
+                            <span class="fas fa-search"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row headerLarge displayNone">
+                    <div class="col-xs-12 col-lg-8">
+                    	<div class="large-nav-logo">
+                        	<div class="nav-bar-toggle" ng-click="Ctrl.toggleNav()">&#9776;</div>
+                        	<div class="logo-expand-screen"><img src="images/logo.png" alt="ICICI Prudential" class="img-responsive" /></div>
+                        </div>	
+                        <div class="welcome-expand-screen">
+                        	<div class="profile-img-section">
+                        		<img src="images/neerajSethiImage.jpg" class="img-profile" ng-class="Ctrl.imgProfileClass">
+                        	</div>                        
+                            <div class="headerWelcomeDiv" ng-click="Ctrl.expandUserOpts()" ng-class="Ctrl.headerWelcomeDivClass">
+                        		<span class="far fa-user optionShow"></span>
+                        		<span class="hidden-xs optionShow">Hi, Neeraj Sethi</span>
+                            	<img src="images/down-arrow2.png" class="headerWelcomeArrowDown optionShow">
+                            	<ul class="userOptions userOptions-expand-screen" ng-if="Ctrl.userOptionsShow" ng-class="Ctrl.userOptionsClass">
+                                	<li><a href="">My Profile</a></li>
+                                	<li><a href="">Logout</a></li>
+                            	</ul>                        		                            
+                            </div>
+                        	<div class="social-networking">
+                        	<a href="" class="fab fa-facebook-f" ng-class="Ctrl.fbIconClass" ng-click="Ctrl.socialNetworkSelect('facebook')"></a>
+                        	<a href="" class="fab fa-twitter" ng-class="Ctrl.twitterIconClass" ng-click="Ctrl.socialNetworkSelect('twitter')"></a>
+                        	<a href="" class="fab fa-google-plus-g" ng-class="Ctrl.googlePlusIconClass" ng-click="Ctrl.socialNetworkSelect('googlePlus')"></a>
+                        	<a href="" class="fab fa-instagram" ng-class="Ctrl.instagramIconClass" ng-click="Ctrl.socialNetworkSelect('instagram')"></a>
+                        	<a href="" class="fab fa-youtube" ng-class="Ctrl.youtubeIconClass" ng-click="Ctrl.socialNetworkSelect('youtube')"></a>
+                        	<a href="" class="fab fa-yahoo" ng-class="Ctrl.yahooIconClass" ng-click="Ctrl.socialNetworkSelect('yahoo')"></a>                                              
+                        	</div>                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+                        <div class="searchBar" ng-if="Ctrl.searchBarShow" ng-class="Ctrl.searchBarClass">
+                        	<span class="alertIcon far fa-bell" ng-click="Ctrl.goToAlerts()">
+                        		<span class="alertIconNumber">2</span>
+                        	</span>
+                        	<a href="javascript:void(0);" class="searchIcon" ng-click="Ctrl.searchClick()">
+                        		<span class="fas fa-search"></span>
+                        	</a>
+                        </div>
+                        <div class="searchText" ng-if="Ctrl.searchTextShow" ng-class="Ctrl.searchBarClass">
+                        	<span class="alertIcon far fa-bell" ng-click="Ctrl.goToAlerts()">
+                        		<span class="alertIconNumber">2</span>
+                        	</span>
+                            <input type="search" class="margin-right-20" style="height:27px" />
+                            <span class="fas fa-search"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+			<!-- Social Media Modal -->
+<!-- 			<div id="socialMediaModal" class="modal" role="dialog" ng-if="true">
+  				<div class="modal-dialog">
+
+    				<div class="modal-content">
+
+      					<div class="modal-header">
+        					<button type="button" class="close" data-dismiss="modal">&times;</button>
+        					<h4 class="modal-title">Modal Header</h4>
+      					</div>
+
+      					<div class="modal-body">
+        					<p>Some text in the modal.</p>
+      					</div>
+
+      					<div class="modal-footer">
+        					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      					</div>
+    				</div>
+  				</div>
+			</div> -->
+
+			<div class="pop-overlay-edit" ng-if="Ctrl.fbLoginShw">
+				<section>
+					<article class="pop-overlay-inner">
+						<div class="myColumn-sm-5">
+							<h2 class="profile-edit-h2">Facebook</h2>
+							<p class="profile-edit-p pd-top-10 font-16">Login with Facebook.</p>
+						</div>
+						<div class="myColumn-sm-6 myColumn-sm-push-1">
+							<div class="pd-top-30">
+								<label class="field-title">USERNAME</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.fbUsername"
+									ng-keyup="Ctrl.validateFbLogin()"
+									placeholder="Enter your username">
+							</div>
+							<div class="pd-top-30">
+								<label class="field-title">PASSWORD</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.fbPassword"
+									ng-keyup="Ctrl.validateFbLogin()"
+									placeholder="Enter your password">
+							</div>							
+							<div class="profile-edit-buttons text-right">
+								<button class="button button-lg pull-right-sm"
+									ng-disabled="!Ctrl.enableFbLoginSave"
+									ng-click="Ctrl.saveFbLogin()">SAVE</button>
+								<button class="button button-text button-lg cancel"
+									ng-click="Ctrl.socialNetworkCancel()">Cancel</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			
+			<div class="pop-overlay-edit" ng-if="Ctrl.twitterLoginShw">
+				<section>
+					<article class="pop-overlay-inner">
+						<div class="myColumn-sm-5">
+							<h2 class="profile-edit-h2">Twitter</h2>
+							<p class="profile-edit-p pd-top-10 font-16">Login with Twitter.</p>
+						</div>
+						<div class="myColumn-sm-6 myColumn-sm-push-1">
+							<div class="pd-top-30">
+								<label class="field-title">USERNAME</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.twitterUsername"
+									ng-keyup="Ctrl.validateTwitterLogin()"
+									placeholder="Enter your username">
+							</div>
+							<div class="pd-top-30">
+								<label class="field-title">PASSWORD</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.twitterPassword"
+									ng-keyup="Ctrl.validateTwitterLogin()"
+									placeholder="Enter your password">
+							</div>							
+							<div class="profile-edit-buttons text-right">
+								<button class="button button-lg pull-right-sm"
+									ng-disabled="!Ctrl.enableTwitterLoginSave"
+									ng-click="Ctrl.saveTwitterLogin()">SAVE</button>
+								<button class="button button-text button-lg cancel"
+									ng-click="Ctrl.socialNetworkCancel()">Cancel</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			
+			<div class="pop-overlay-edit" ng-if="Ctrl.googlePlusLoginShw">
+				<section>
+					<article class="pop-overlay-inner">
+						<div class="myColumn-sm-5">
+							<h2 class="profile-edit-h2">Google Plus</h2>
+							<p class="profile-edit-p pd-top-10 font-16">Login with Google Plus.</p>
+						</div>
+						<div class="myColumn-sm-6 myColumn-sm-push-1">
+							<div class="pd-top-30">
+								<label class="field-title">USERNAME</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.googlePlusUsername"
+									ng-keyup="Ctrl.validateGooglePlusLogin()"
+									placeholder="Enter your username">
+							</div>
+							<div class="pd-top-30">
+								<label class="field-title">PASSWORD</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.googlePlusPassword"
+									ng-keyup="Ctrl.validateGooglePlusLogin()"
+									placeholder="Enter your password">
+							</div>							
+							<div class="profile-edit-buttons text-right">
+								<button class="button button-lg pull-right-sm"
+									ng-disabled="!Ctrl.enableGooglePlusLoginSave"
+									ng-click="Ctrl.saveGooglePlusLogin()">SAVE</button>
+								<button class="button button-text button-lg cancel"
+									ng-click="Ctrl.socialNetworkCancel()">Cancel</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			
+			<div class="pop-overlay-edit" ng-if="Ctrl.instagramLoginShw">
+				<section>
+					<article class="pop-overlay-inner">
+						<div class="myColumn-sm-5">
+							<h2 class="profile-edit-h2">Instagram</h2>
+							<p class="profile-edit-p pd-top-10 font-16">Login with Instagram.</p>
+						</div>
+						<div class="myColumn-sm-6 myColumn-sm-push-1">
+							<div class="pd-top-30">
+								<label class="field-title">USERNAME</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.instagramUsername"
+									ng-keyup="Ctrl.validateInstagramLogin()"
+									placeholder="Enter your username">
+							</div>
+							<div class="pd-top-30">
+								<label class="field-title">PASSWORD</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.instagramPassword"
+									ng-keyup="Ctrl.validateInstagramLogin()"
+									placeholder="Enter your password">
+							</div>							
+							<div class="profile-edit-buttons text-right">
+								<button class="button button-lg pull-right-sm"
+									ng-disabled="!Ctrl.enableInstagramSave"
+									ng-click="Ctrl.saveInstagramLogin()">SAVE</button>
+								<button class="button button-text button-lg cancel"
+									ng-click="Ctrl.socialNetworkCancel()">Cancel</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			
+			<div class="pop-overlay-edit" ng-if="Ctrl.youtubeLoginShw">
+				<section>
+					<article class="pop-overlay-inner">
+						<div class="myColumn-sm-5">
+							<h2 class="profile-edit-h2">YouTube</h2>
+							<p class="profile-edit-p pd-top-10 font-16">Login with YouTube.</p>
+						</div>
+						<div class="myColumn-sm-6 myColumn-sm-push-1">
+							<div class="pd-top-30">
+								<label class="field-title">USERNAME</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.youtubeUsername"
+									ng-keyup="Ctrl.validateYoutubeLogin()"
+									placeholder="Enter your username">
+							</div>
+							<div class="pd-top-30">
+								<label class="field-title">PASSWORD</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.youtubePassword"
+									ng-keyup="Ctrl.validateYoutubeLogin()"
+									placeholder="Enter your password">
+							</div>							
+							<div class="profile-edit-buttons text-right">
+								<button class="button button-lg pull-right-sm"
+									ng-disabled="!Ctrl.enableYoutubeSave"
+									ng-click="Ctrl.saveYoutubeLogin()">SAVE</button>
+								<button class="button button-text button-lg cancel"
+									ng-click="Ctrl.socialNetworkCancel()">Cancel</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>
+			
+			<div class="pop-overlay-edit" ng-if="Ctrl.yahooLoginShw">
+				<section>
+					<article class="pop-overlay-inner">
+						<div class="myColumn-sm-5">
+							<h2 class="profile-edit-h2">Yahoo</h2>
+							<p class="profile-edit-p pd-top-10 font-16">Login with Yahoo.</p>
+						</div>
+						<div class="myColumn-sm-6 myColumn-sm-push-1">
+							<div class="pd-top-30">
+								<label class="field-title">USERNAME</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.yahooUsername"
+									ng-keyup="Ctrl.validateYahooLogin()"
+									placeholder="Enter your username">
+							</div>
+							<div class="pd-top-30">
+								<label class="field-title">PASSWORD</label> <input
+									class="border-bottom profile-edit-input" type="text"
+									ng-model="Ctrl.yahooPassword"
+									ng-keyup="Ctrl.validateYahooLogin()"
+									placeholder="Enter your password">
+							</div>							
+							<div class="profile-edit-buttons text-right">
+								<button class="button button-lg pull-right-sm"
+									ng-disabled="!Ctrl.enableYahooSave"
+									ng-click="Ctrl.saveYahooLogin()">SAVE</button>
+								<button class="button button-text button-lg cancel"
+									ng-click="Ctrl.socialNetworkCancel()">Cancel</button>
+							</div>
+						</div>
+					</article>
+				</section>
+			</div>																				
+
+			<div ng-view> </div>
+        </div>
+        <!-- Content End -->
+        
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            resizeElements();
+
+            $(window).resize(function() {
+                resizeElements();
+                $('.sidebar1').removeClass('navOpenSidebar').addClass('navCloseSidebar');
+                $('.content').removeClass('navOpenContent').addClass('navCloseContent');
+                $('header').removeClass('navOpenHeader').addClass('navCloseHeader');
+                $('.headerSmall').removeClass('displayBlock').addClass('displayNone');
+                $('.headerLarge').removeClass('displayNone').addClass('displayBlock');
+            });
+
+            function resizeElements() {
+                var winHeight = $(window).innerHeight();
+                $('.sidebar1').css('height', winHeight);
+
+                var headerHeight = $('header').outerHeight();
+                var pageTitleHeight = $('.pageHeading').outerHeight();
+                $('.card-view-container').css('height', winHeight - headerHeight - pageTitleHeight - 100);
+                //$( ".tab-right-arrow" ).trigger( "click" );
+            }
+
+            $(document).on('click', '.tab-right-arrow', function() {
+                $(".tab-headings").animate({
+                    scrollLeft: '+=160px'
+                });
+            });
+
+            $(document).on('click', '.tab-left-arrow', function() {
+                $(".tab-headings").animate({
+                    scrollLeft: '-=165px'
+                });
+            });
+            
+        });
+    </script>
+
+</body>
+
+</html>
